@@ -662,6 +662,28 @@ h3 {
   font-weight: 720;
 }
 
+.usecase-note {
+  margin-top: 16px;
+  border: 1px solid rgba(9, 31, 77, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 16px 40px rgba(8, 25, 61, 0.1);
+}
+
+.usecase-note h3 {
+  margin: 0 0 12px;
+  color: #0a3273;
+  font-size: clamp(1.32rem, 2.6vw, 1.9rem);
+}
+
+.usecase-note p:last-child {
+  margin: 0;
+  color: #33415c;
+  font-size: clamp(1rem, 2vw, 1.13rem);
+  font-weight: 780;
+}
+
 .usecase-flow-band {
   background: #071b43;
 }
