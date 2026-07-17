@@ -346,8 +346,8 @@ h3 {
 }
 
 .usecase-card:first-child img {
-  object-fit: contain;
-  padding: 18px;
+  object-fit: cover;
+  padding: 0;
 }
 
 .usecase-card div {
@@ -838,10 +838,6 @@ h3 {
 
   .usecase-card img {
     height: 210px;
-  }
-
-  .usecase-card:first-child img {
-    height: 260px;
   }
 
   .site-footer {
