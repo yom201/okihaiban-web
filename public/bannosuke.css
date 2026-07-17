@@ -239,6 +239,39 @@ h3 {
   object-fit: cover;
 }
 
+.theft-landing .site-header {
+  left: 50%;
+  width: min(1500px, 100%);
+  transform: translateX(-50%);
+}
+
+.theft-landing .hero {
+  grid-template-columns: minmax(360px, 600px) minmax(420px, 620px);
+  justify-content: center;
+  gap: clamp(32px, 5vw, 72px);
+  min-height: min(810px, 92svh);
+  padding-right: clamp(24px, 5vw, 64px);
+  padding-left: clamp(24px, 5vw, 64px);
+}
+
+.theft-landing .hero-copy {
+  justify-self: end;
+}
+
+.theft-landing .hero-copy p {
+  max-width: 600px;
+}
+
+.theft-landing .hero h1 {
+  max-width: 620px;
+  font-size: clamp(3.05rem, 5.8vw, 5.9rem);
+}
+
+.theft-landing .hero-threat {
+  justify-self: start;
+  width: min(620px, 100%);
+}
+
 .section-band {
   padding: clamp(68px, 9vw, 118px) clamp(20px, 5vw, 68px);
 }
@@ -778,6 +811,30 @@ h3 {
   .hero {
     min-height: auto;
     padding-top: 104px;
+  }
+
+  .theft-landing .site-header {
+    width: 100%;
+  }
+
+  .theft-landing .hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    min-height: auto;
+    padding-top: 104px;
+  }
+
+  .theft-landing .hero-copy,
+  .theft-landing .hero-threat {
+    justify-self: center;
+  }
+
+  .theft-landing .hero-copy {
+    width: min(760px, 100%);
+  }
+
+  .theft-landing .hero-threat {
+    width: min(720px, 100%);
   }
 
   .usecase-hero {
