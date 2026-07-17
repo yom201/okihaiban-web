@@ -230,6 +230,15 @@ h3 {
   object-fit: contain;
 }
 
+.hero-threat {
+  width: min(680px, 100%);
+}
+
+.hero-threat img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .section-band {
   padding: clamp(68px, 9vw, 118px) clamp(20px, 5vw, 68px);
 }

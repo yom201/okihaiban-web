@@ -6,96 +6,176 @@
     <title>置き配荷物の持ち去りに備える | 置き配番</title>
     <meta
       name="description"
-      content="置き配番のユースケース。置き配荷物の持ち去りに対して、人が出入りした前後を画像と動画で残す備えを紹介します。"
+      content="置き配番は、余ったスマホで玄関前の置き配エリアを見守るアプリです。置き配荷物の持ち去りに備え、人が出入りした前後を画像と動画で確認しやすくします。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://okihaiban.com/usecase-theft-record.html" />
     <meta property="og:title" content="置き配荷物の持ち去りに備える | 置き配番" />
-    <meta property="og:description" content="盗難を断定せず、玄関前に人が出入りした前後を記録として残す。" />
+    <meta
+      property="og:description"
+      content="余ったスマホを玄関前に向けるだけ。置き配エリアの異変の前後を記録します。"
+    />
     <meta property="og:image" content="https://okihaiban.com/assets/usecase-theft-record.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
+    <link rel="preload" href="/assets/usecase-theft-record.png" as="image" />
     <link rel="stylesheet" href="/bannosuke.css" />
   </head>
-  <body class="usecase-detail">
+  <body class="theft-landing">
     <header class="site-header" aria-label="サイトヘッダー">
       <a class="brand" href="/bannosuke.html" aria-label="置き配番トップへ">
         <img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" />
       </a>
       <nav class="nav-links" aria-label="主要ナビゲーション">
-        <a href="/bannosuke.html#usecases">用途別</a>
-        <a href="/bannosuke.html#how">記録の流れ</a>
-        <a href="/bannosuke.html#camera">カメラとの違い</a>
+        <a href="#reason">なぜ必要か</a>
+        <a href="#how">記録の流れ</a>
+        <a href="#camera">カメラとの違い</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="usecase-hero section-band" aria-labelledby="usecase-title">
-        <div class="section-inner usecase-hero-grid">
-          <div class="usecase-copy">
-            <a class="back-link" href="/bannosuke.html#usecases">用途一覧へ戻る</a>
-            <p class="section-kicker">USE CASE 02</p>
-            <h1 id="usecase-title">置き配荷物の持ち去りに、記録で備える。</h1>
-            <p>
-              置き配番は盗難かどうかをアプリが断定するのではなく、玄関前に人が出入りした前後を残します。
-              もしもの時に、何が起きたかを確認する材料を手元に残すための備えです。
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">置き配荷物の見張り番</p>
+          <h1 id="hero-title">置き配番が、玄関前の異変を見逃さない。</h1>
+          <p>
+            余ったスマホを置き配エリアに向けるだけ。
+            侵入前・侵入時・侵入後の画像と動画を残し、あとから状況を確認しやすくします。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#how">しくみを見る</a>
+            <a class="button secondary" href="/index.html">通常版LPを見る</a>
+          </div>
+        </div>
+        <figure class="hero-character hero-threat">
+          <img src="/assets/usecase-theft-record.png" alt="玄関前でスマホのフラッシュに驚く不審者のイメージ" />
+        </figure>
+      </section>
+
+      <section id="reason" class="news-band section-band" aria-labelledby="reason-title">
+        <div class="section-inner split">
+          <div>
+            <p class="section-kicker">WHY NOW</p>
+            <h2 id="reason-title">置き配が増えるほど、玄関前の数分が大事になる。</h2>
+            <p class="reason-catch">
+              配達が来たことと、玄関前から人が離れたことを画像で確認してから、
+              <span>安心して玄関を開けられる。</span>
             </p>
           </div>
-          <figure class="usecase-visual">
-            <img src="/assets/usecase-theft-record.png" alt="玄関前の荷物に近づく人物をスマホが照らしているイメージ" />
+          <div class="reason-cards">
+            <div class="news-card">
+              <p>
+                共同通信は2025年11月、国土交通省が置き配を宅配便の標準サービスに追加する方針を決めたと報じました。
+                国交省資料でも、宅配ボックスや置き配などの多様な受取方法の利用率を2030年度までに50%程度へ高める目標が示されています。
+              </p>
+              <strong>便利になるほど、置かれた後の見守りが必要です。</strong>
+            </div>
+            <div class="news-card use-case-card">
+              <p>
+                注文した商品が届く日に家で受け取れない。対面で受け取りたくないので、配達員が帰ったのを確認してから受け取りたい。
+              </p>
+              <p>
+                女性の一人暮らしだから、フードデリバリーも対面で受け取りたくない。配達員が帰ったのを確認して取りに行きたい。
+              </p>
+              <strong>そんな時だけ、置き配番で手軽に玄関前を監視できます。</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section-band how-band" aria-labelledby="how-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">HOW IT WORKS</p>
+            <h2 id="how-title">置き配エリアに入った動きを、4つの記録で残す。</h2>
+          </div>
+          <div class="record-grid">
+            <article>
+              <span>1</span>
+              <h3>侵入前の画像</h3>
+              <p>動きが入る直前の玄関前を残し、荷物が元からあったかを確認しやすくします。</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>侵入した瞬間の画像</h3>
+              <p>人物や荷物が映った瞬間を保存し、何が起きたかを一目で追えるようにします。</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>侵入後の画像</h3>
+              <p>少し後の状態を残し、荷物が届いたのか、見えなくなったのかを比べやすくします。</p>
+            </article>
+            <article>
+              <span>4</span>
+              <h3>前後の動画</h3>
+              <p>画像だけでは分からない一連の経緯を、短い動画として確認できる形にします。</p>
+            </article>
+          </div>
+          <figure class="explainer">
+            <img src="/assets/main.png" alt="置き配番アプリの記録イメージ。侵入前、侵入時、侵入後、動画を保存する説明図" />
           </figure>
         </div>
       </section>
 
-      <section class="section-band usecase-point-band" aria-labelledby="scene-title">
+      <section id="camera" class="section-band camera-band" aria-labelledby="camera-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-kicker">SCENE</p>
-            <h2 id="scene-title">置き配エリアに人が入った前後を見守る。</h2>
+            <p class="section-kicker">CAMERA GAP</p>
+            <h2 id="camera-title">専用カメラの前に、余ったスマホという選択肢。</h2>
           </div>
-          <div class="usecase-points">
+          <div class="camera-grid">
             <article>
-              <span>01</span>
-              <h3>異変の直前を残す</h3>
-              <p>人が近づく前の玄関前を残し、荷物が見えていたかをあとから確認しやすくします。</p>
+              <div class="camera-problem">
+                <span>課題 1</span>
+                <h3>専用カメラの購入費や月額料金がかかる</h3>
+                <p>本体、電源、取付、クラウド録画プランまで考えると、玄関前の置き配だけには重くなりがちです。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>月額390円のみ</h4>
+                <p>定期的な製品アップデートや、より使いやすい記録体験を提供します。</p>
+              </div>
             </article>
             <article>
-              <span>02</span>
-              <h3>近づいた瞬間を残す</h3>
-              <p>誰かが置き配エリアに入った瞬間を、静止画としてあとから見返せるようにします。</p>
+              <div class="camera-problem">
+                <span>課題 2</span>
+                <h3>録画データの保存先・保存期間に制約がある</h3>
+                <p>製品によって保存先や保存期間が決まり、クラウド料金や容量条件に左右される場合があります。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>スマホのストレージ＋あなたのGoogleドライブ</h4>
+                <p>データはすべてあなたのもの。保存容量も保存期間も、あなたの管理下で決められます。</p>
+              </div>
             </article>
             <article>
-              <span>03</span>
-              <h3>その後の状態を残す</h3>
-              <p>荷物がまだあるのか、見えなくなったのかを、前後の画像と動画で確認します。</p>
+              <div class="camera-problem">
+                <span>課題 3</span>
+                <h3>置き配専用ではなく、前後の状況を把握しにくい</h3>
+                <p>一般的なカメラは動体や人物の検知が中心。置き配エリアで何が起きたかは、利用者の確認に寄りがちです。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>置き配監視に特化した撮影機能を提供</h4>
+                <p>侵入前、侵入時、侵入後の3枚の画像と、一連の動画を合わせて記録します。</p>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section-band usecase-flow-band" aria-labelledby="flow-title">
-        <div class="section-inner usecase-flow">
+      <section class="section-band solution-band" aria-labelledby="solution-title">
+        <div class="section-inner solution">
           <div>
-            <p class="section-kicker">FLOW</p>
-            <h2 id="flow-title">抑止よりも先に、まず記録を残す。</h2>
+            <p class="section-kicker">OKIHAIBAN</p>
+            <h2 id="solution-title">置き配番は、スマホを玄関前の番人にするアプリです。</h2>
+            <p>
+              置き配エリアを指定し、動きがあった前後を画像と動画で記録。
+              Gmail通知やGoogle Drive保存も含め、人が出入りした前後をあとから確認できる材料として残すことを目指しています。
+            </p>
           </div>
-          <ol class="usecase-flow-list">
-            <li>置き配エリアを決めて、スマホを固定</li>
-            <li>動きが入った前後を3枚画像と動画で保存</li>
-            <li>必要な時に、状況説明の材料として見返す</li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section-band related-band" aria-labelledby="related-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">NEXT</p>
-            <h2 id="related-title">ほかの使い方も見る。</h2>
-          </div>
-          <div class="related-links">
-            <a href="/usecase-remote-check.html">外出先から置き配を確認</a>
-            <a href="/usecase-contactless-pickup.html">対面せずに落ち着いて受け取る</a>
+          <div class="mascot-card">
+            <img src="/assets/solution-preview.png" alt="置き配番のスマホ監視イメージ" />
           </div>
         </div>
       </section>
