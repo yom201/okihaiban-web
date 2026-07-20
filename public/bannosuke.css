@@ -735,6 +735,29 @@ h3 {
   box-shadow: 0 16px 40px rgba(8, 25, 61, 0.1);
 }
 
+.contactless-pickup .usecase-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+
+.usecase-note-visual {
+  width: min(520px, 100%);
+  overflow: hidden;
+  margin: 0;
+  justify-self: center;
+  border-radius: 8px;
+}
+
+.usecase-note-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .usecase-note h3 {
   margin: 0 0 12px;
   color: #0a3273;
@@ -862,6 +885,10 @@ h3 {
   .usecase-hero {
     min-height: auto;
     padding-top: 120px;
+  }
+
+  .contactless-pickup .usecase-note {
+    grid-template-columns: 1fr;
   }
 
   .hero-character {
