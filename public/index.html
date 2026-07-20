@@ -3,207 +3,230 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>置き配番 | 置き配が増える時代の玄関前監視アプリ</title>
+    <title>置き配番 | 番之助と見守る置き配エリア</title>
     <meta
       name="description"
-      content="置き配が標準的な受け取り方になっていく時代に、余ったスマホで玄関前の荷物を見守る。置き配番は開発中の置き配場所監視アプリです。"
+      content="置き配番は、余ったスマホで玄関前の置き配エリアを見守るアプリです。番之助が荷物の前後を記録し、あとから確認しやすくします。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://okihaiban.com/" />
-    <meta property="og:title" content="置き配番 | 置き配が増える時代の玄関前監視アプリ" />
+    <meta property="og:title" content="置き配番 | 番之助と見守る置き配エリア" />
     <meta
       property="og:description"
-      content="専用カメラを買う前に、余ったスマホで玄関前の荷物を見守る。"
+      content="余ったスマホが、玄関前の置き配エリアを見守る番人に。"
     />
-    <meta property="og:image" content="https://okihaiban.com/assets/hero-genkan-watch.jpg" />
+    <meta property="og:image" content="https://okihaiban.com/assets/bannosuke-character.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://okihaiban.com/" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
-    <link rel="preload" href="/assets/hero-genkan-watch.jpg" as="image" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/assets/bannosuke-hero-overview.png" as="image" />
+    <link rel="stylesheet" href="/bannosuke.css" />
   </head>
-  <body>
+  <body class="bannosuke-landing">
     <header class="site-header" aria-label="サイトヘッダー">
-      <a class="brand" href="#top" aria-label="置き配番 トップへ">
-        <img src="/assets/okihaiban-logo-256.png" alt="" width="42" height="42" />
-        <span>置き配番</span>
+      <a class="brand" href="#top" aria-label="置き配番 番之助版トップへ">
+        <img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" />
       </a>
       <nav class="nav-links" aria-label="主要ナビゲーション">
-        <a href="#news">ニュース</a>
-        <a href="#camera">カメラの限界</a>
-        <a href="#solution">置き配番</a>
+        <a href="#usecases">用途別</a>
+        <a href="#reason">なぜ必要か</a>
+        <a href="#how">記録の流れ</a>
+        <a href="#camera">カメラとの違い</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">置き配が、特別ではなくなる前に。</p>
-          <h1 id="hero-title">玄関前に置かれる荷物、見えてますか。</h1>
-          <p class="hero-copy">
-            国交省は、置き配や宅配ボックスを含む受け取り方法の普及を進めています。
-            便利になるほど、荷物が玄関前に残る時間も増える。だから備えが必要です。
+        <div class="hero-copy">
+          <p class="eyebrow">スマホを高性能セキュリティカメラに変えるアプリ</p>
+          <h1 id="hero-title">
+            <span class="hero-title-line">置き配番が、</span>
+            <span class="hero-title-line">玄関前の異変を</span>
+            <span class="hero-title-line">見逃さない。</span>
+          </h1>
+          <p>
+            余ったスマホを置き配エリアに向けるだけ。
+            侵入前・侵入時・侵入後の画像と動画を残し、あとから状況を確認しやすくします。
           </p>
-          <div class="hero-actions" aria-label="ページ内リンク">
-            <a class="button primary" href="#news">なぜ今なのか</a>
-            <a class="button secondary" href="#solution">置き配番を見る</a>
+          <div class="hero-actions">
+            <a class="button primary" href="#usecases">用途から選ぶ</a>
+            <a class="button secondary" href="#how">しくみを見る</a>
           </div>
         </div>
-        <div class="hero-strip" aria-label="置き配番の訴求">
-          <span>余ったスマホを活用</span>
-          <span>玄関前の荷物に特化</span>
-          <span>公開前プレビュー</span>
-        </div>
+        <figure class="hero-character hero-bannosuke">
+          <img
+            src="/assets/bannosuke-hero-overview.png"
+            alt="余ったスマートフォンを玄関前のセキュリティカメラとして活用するイメージ"
+          />
+        </figure>
       </section>
 
-      <section id="news" class="news section-band">
-        <div class="section-inner news-layout">
-          <div class="news-copy">
-            <p class="section-kicker">NEWS CONTEXT</p>
-            <h2>置き配は、これからもっと選ばれる。</h2>
-            <p>
-              共同通信は2025年11月7日、国土交通省が
-              <q>置き配を、宅配便の標準サービスに追加する方針</q>
-              を決めたと報じました。国交省の資料でも、宅配ボックスや置き配などを
-              より選択しやすくする環境整備が示されています。
-            </p>
-          </div>
-          <aside class="quote-card" aria-label="ニュース引用と統計">
-            <p class="quote-mark">“</p>
-            <blockquote>
-              「置き配」を宅配便の標準サービスに追加する方針
-            </blockquote>
-            <p class="quote-source">共同通信 2025年11月7日報道</p>
-            <div class="metric-grid">
-              <div>
-                <strong>31.0%</strong>
-                <span>2026年4月の多様な受取方法の利用率</span>
-              </div>
-              <div>
-                <strong>50%程度</strong>
-                <span>2030年度までの国交省目標</span>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="risk section-band light">
+      <section id="usecases" class="section-band usecase-entry-band" aria-labelledby="usecases-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-kicker">RISK</p>
-            <h2>便利さの裏側で、玄関前は無防備になりやすい。</h2>
-            <p>
-              置き配は再配達を減らし、受け取りを楽にします。
-              でも、荷物が置かれた後の数分から数時間は、家の前に小さな空白が生まれます。
+            <p class="section-kicker">USE CASES</p>
+            <h2 id="usecases-title">不安の種類から、置き配番の使い方を選ぶ。</h2>
+            <p class="section-lead">
+              置き配番の入口は3つ。外出中の確認、持ち去りへの備え、対面せずに受け取りたい場面に分けて、
+              必要な記録と見せ方を整理します。
             </p>
           </div>
-          <div class="risk-grid">
-            <article>
-              <span>01</span>
-              <h3>荷物が置かれた事実は分かっても、その後が見えない</h3>
-              <p>配達完了通知だけでは、置かれた後に何が起きたかまでは追えません。</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>帰宅して初めて、異変に気づく</h3>
-              <p>玄関前にあるはずの荷物がない。その時点で、状況の確認材料が足りないことがあります。</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>備えは大げさではなく、生活の前提になる</h3>
-              <p>置き配が増えるほど、玄関前の荷物を見守る仕組みは特別な防犯ではなく日常の備えになります。</p>
-            </article>
+          <div class="usecase-grid">
+            <a class="usecase-card" href="/usecase-remote-check.html">
+              <img src="/assets/usecase-remote-cafe-check.png" alt="外出先でスマホから置き配エリアの様子を確認している女性" />
+              <div>
+                <p class="usecase-label">USE CASE 01</p>
+                <h3>外出先から置き配を確認</h3>
+                <p>家にいない日でも、人の出入りや玄関前の様子を、保存された画像と動画から確認しやすくします。</p>
+                <span>詳しく見る</span>
+              </div>
+            </a>
+            <a class="usecase-card" href="/usecase-theft-record.html">
+              <img src="/assets/usecase-theft-record.png" alt="玄関前の荷物に近づく人物をスマホが照らしているイメージ" />
+              <div>
+                <p class="usecase-label">USE CASE 02</p>
+                <h3>置き配荷物の持ち去りに備える</h3>
+                <p>盗難を断定するのではなく、異変の前後を記録して、万一の確認材料を残します。</p>
+                <span>詳しく見る</span>
+              </div>
+            </a>
+            <a class="usecase-card" href="/usecase-contactless-pickup.html">
+              <img src="/assets/usecase-contactless-pickup.png" alt="玄関前にフードデリバリーを置く配達員のイメージ" />
+              <div>
+                <p class="usecase-label">USE CASE 03</p>
+                <h3>対面せずに落ち着いて受け取る</h3>
+                <p>フードデリバリーや宅配で、人が離れたことを画像で確認してから玄関を開けたい時に。</p>
+                <span>詳しく見る</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="camera" class="camera section-band">
-        <div class="section-inner">
-          <div class="section-heading compact">
-            <p class="section-kicker">SECURITY CAMERA GAP</p>
-            <h2>既存のセキュリティカメラだけでは、置き配には少し重い。</h2>
-          </div>
-          <div class="problem-list">
-            <article class="problem-item">
-              <div class="problem-icon">¥</div>
-              <div>
-                <h3>専用カメラの購入費や月額料金がかかる</h3>
-                <p>
-                  カメラ本体だけでなく、取付部品、電源、場合によっては録画プランが必要です。
-                  例えばRing Stick Up Cam Batteryは本体8,980円、Ring Home Basicは1台あたり月額350円・年額3,500円。
-                  初年度だけでも本体と年間利用料で約12,480円になります。
-                </p>
-                <p class="source-note">価格・プランは2026年7月確認時点。変更される場合があります。</p>
-              </div>
-            </article>
-            <article class="problem-item">
-              <div class="problem-icon">期限</div>
-              <div>
-                <h3>録画データの保存先・保存期間に制約がある</h3>
-                <p>
-                  Ringでは録画映像の再生・保存に有料プランが必要で、イベント/ビデオ履歴は最長180日間です。
-                  一方、TapoのようにmicroSDカードへ保存できる製品もあります。
-                  つまり課題は「必ずクラウド」ではなく、製品ごとに保存先・保存期間・追加料金の条件が決まっていることです。
-                </p>
-                <p class="source-note">保存先を自由に選べず、クラウド料金が必要な場合があります。</p>
-              </div>
-            </article>
-            <article class="problem-item">
-              <div class="problem-icon">荷</div>
-              <div>
-                <h3>置き配専用ではなく、荷物の変化を正確に把握しにくい</h3>
-                <p>
-                  一般的なセキュリティカメラの中心は動体検知や人物検知です。
-                  配達員、家族、通行人、荷物を持ち去る人物の動きを同じように検知し、最後は利用者が録画を見て判断する必要があります。
-                  一部のドアベル製品には荷物通知がありますが、荷物が画角内にあることや設置角度・明るさの条件に左右されます。
-                </p>
-                <p class="source-note">置き配専用ではないため、荷物の設置・持ち去りの文脈を判別しにくい場合があります。</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="solution" class="solution section-band accent">
-        <div class="section-inner solution-layout">
+      <section id="reason" class="news-band section-band" aria-labelledby="reason-title">
+        <div class="section-inner split">
           <div>
-            <p class="section-kicker">SOLUTION</p>
-            <h2>そこで、置き配番。</h2>
-            <p class="solution-lead">
-              余ったスマホを玄関前に向けて、置き配場所を見守るためのアプリです。
-              専用カメラを増やす前に、家にあるスマホで「置かれた後」を残す。
+            <p class="section-kicker">WHY NOW</p>
+            <h2 id="reason-title">置き配が増えるほど、玄関前の数分が大事になる。</h2>
+            <p class="reason-catch">
+              配達が来たことと、玄関前から人が離れたことを画像で確認してから、
+              <span>安心して玄関を開けられる。</span>
             </p>
           </div>
-          <div class="solution-card">
-            <h3>置き配番が目指すこと</h3>
-            <ul>
-              <li>玄関前の荷物が映る範囲を指定して見守る</li>
-              <li>検知時・直前・少し後のスナップショットを残す</li>
-              <li>動画と画像で、あとから状況を確認しやすくする</li>
-              <li>「盗難」と断定せず、荷物の変化を事実ベースで知らせる</li>
-            </ul>
+          <div class="reason-cards">
+            <div class="news-card">
+              <p>
+                共同通信は2025年11月、国土交通省が置き配を宅配便の標準サービスに追加する方針を決めたと報じました。
+                国交省資料でも、宅配ボックスや置き配などの多様な受取方法の利用率を2030年度までに50%程度へ高める目標が示されています。
+              </p>
+              <strong>便利になるほど、置かれた後の見守りが必要です。</strong>
+            </div>
+            <div class="news-card use-case-card">
+              <p>
+                注文した商品が届く日に家で受け取れない。対面で受け取りたくないので、配達員が帰ったのを確認してから受け取りたい。
+              </p>
+              <p>
+                女性の一人暮らしだから、フードデリバリーも対面で受け取りたくない。配達員が帰ったのを確認して取りに行きたい。
+              </p>
+              <strong>そんな時だけ、置き配番で手軽に玄関前を監視できます。</strong>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="closing section-band dark">
-        <div class="section-inner closing-inner">
-          <p class="section-kicker">PREVIEW</p>
-          <h2>置き配が増える時代の、玄関前の番人。</h2>
-          <p>
-            置き配番は現在開発中です。このページは公開前プレビューです。
-            置き配が便利になるほど必要になる「置かれた後の見守り」を、余ったスマホから始められる形にしていきます。
-          </p>
-          <div class="source-list" aria-label="参考情報">
-            <a href="https://kumanichi.com/articles/1922355" target="_blank" rel="noreferrer">共同通信報道</a>
-            <a href="https://www.mlit.go.jp/report/interview/daijin251111.html" target="_blank" rel="noreferrer">国交省 大臣会見</a>
-            <a href="https://www.mlit.go.jp/report/press/tokatsu01_hh_001025.html" target="_blank" rel="noreferrer">国交省 受取方法調査</a>
-            <a href="https://ring.com/jp/ja/products/stick-up-security-camera-battery" target="_blank" rel="noreferrer">Ring本体価格</a>
-            <a href="https://ring.com/jp/ja/support/articles/v5hc7/introducing-ring-plans" target="_blank" rel="noreferrer">Ring Homeプラン</a>
-            <a href="https://support.google.com/googlehome/answer/13315909?co=GENIE.Platform%3DAndroid&hl=en" target="_blank" rel="noreferrer">Google Home Premium</a>
-            <a href="https://www.tp-link.com/jp/home-networking/cloud-camera/tapo-c410/" target="_blank" rel="noreferrer">Tapo保存方式</a>
+      <section id="how" class="section-band how-band" aria-labelledby="how-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">HOW IT WORKS</p>
+            <h2 id="how-title">置き配エリアに入った動きを、4つの記録で残す。</h2>
+          </div>
+          <div class="record-grid">
+            <article>
+              <span>1</span>
+              <h3>侵入前の画像</h3>
+              <p>動きが入る直前の玄関前を残し、荷物が元からあったかを確認しやすくします。</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>侵入した瞬間の画像</h3>
+              <p>人物や荷物が映った瞬間を保存し、何が起きたかを一目で追えるようにします。</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>侵入後の画像</h3>
+              <p>少し後の状態を残し、荷物が届いたのか、見えなくなったのかを比べやすくします。</p>
+            </article>
+            <article>
+              <span>4</span>
+              <h3>前後の動画</h3>
+              <p>画像だけでは分からない一連の経緯を、短い動画として確認できる形にします。</p>
+            </article>
+          </div>
+          <figure class="explainer">
+            <img src="/assets/main.png" alt="置き配番アプリの記録イメージ。侵入前、侵入時、侵入後、動画を保存する説明図" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="camera" class="section-band camera-band" aria-labelledby="camera-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">CAMERA GAP</p>
+            <h2 id="camera-title">専用カメラの前に、余ったスマホという選択肢。</h2>
+          </div>
+          <div class="camera-grid">
+            <article>
+              <div class="camera-problem">
+                <span>課題 1</span>
+                <h3>専用カメラの購入費や月額料金がかかる</h3>
+                <p>本体、電源、取付、クラウド録画プランまで考えると、玄関前の置き配だけには重くなりがちです。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>月額390円のみ</h4>
+                <p>定期的な製品アップデートや、より使いやすい記録体験を提供します。</p>
+              </div>
+            </article>
+            <article>
+              <div class="camera-problem">
+                <span>課題 2</span>
+                <h3>録画データの保存先・保存期間に制約がある</h3>
+                <p>製品によって保存先や保存期間が決まり、クラウド料金や容量条件に左右される場合があります。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>スマホのストレージ＋あなたのGoogleドライブ</h4>
+                <p>データはすべてあなたのもの。保存容量も保存期間も、あなたの管理下で決められます。</p>
+              </div>
+            </article>
+            <article>
+              <div class="camera-problem">
+                <span>課題 3</span>
+                <h3>置き配専用ではなく、前後の状況を把握しにくい</h3>
+                <p>一般的なカメラは動体や人物の検知が中心。置き配エリアで何が起きたかは、利用者の確認に寄りがちです。</p>
+              </div>
+              <div class="okihaiban-answer">
+                <span>置き配番なら</span>
+                <h4>置き配監視に特化した撮影機能を提供</h4>
+                <p>侵入前、侵入時、侵入後の3枚の画像と、一連の動画を合わせて記録します。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band solution-band" aria-labelledby="solution-title">
+        <div class="section-inner solution">
+          <div>
+            <p class="section-kicker">OKIHAIBAN</p>
+            <h2 id="solution-title">置き配番は、スマホを玄関前の番人にするアプリです。</h2>
+            <p>
+              置き配エリアを指定し、動きがあった前後を画像と動画で記録。
+              Gmail通知やGoogle Drive保存も含め、人が出入りした前後をあとから確認できる材料として残すことを目指しています。
+            </p>
+          </div>
+          <div class="mascot-card">
+            <img src="/assets/solution-preview.png" alt="置き配番のスマホ監視イメージ" />
           </div>
         </div>
       </section>
@@ -211,8 +234,7 @@
 
     <footer class="site-footer">
       <a class="brand footer-brand" href="#top">
-        <img src="/assets/okihaiban-logo-256.png" alt="" width="32" height="32" />
-        <span>置き配番</span>
+        <img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" />
       </a>
       <div class="footer-meta">
         <nav class="footer-links" aria-label="法的情報">
