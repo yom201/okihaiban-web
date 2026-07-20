@@ -230,6 +230,11 @@ h3 {
   object-fit: contain;
 }
 
+.hero-bannosuke {
+  width: min(680px, 100%);
+  margin: 0;
+}
+
 .hero-threat {
   width: min(680px, 100%);
 }
