@@ -254,10 +254,26 @@ h3 {
   letter-spacing: 0.06em;
 }
 
-.bannosuke-landing .hero-copy > p:not(.eyebrow) {
+.bannosuke-landing .hero-copy .hero-context {
+  width: fit-content;
+  margin: 0 0 18px;
+  border-left: 4px solid var(--yellow);
+  padding: 5px 0 5px 12px;
+  color: #ffffff;
+  font-size: clamp(0.92rem, 1.3vw, 1.12rem);
+  font-weight: 1000;
+  letter-spacing: 0.02em;
+}
+
+.bannosuke-landing .hero-copy > .hero-description {
   font-size: clamp(1.05rem, 1.4vw, 1.25rem);
   line-break: strict;
   word-break: auto-phrase;
+}
+
+.hero-description .usage-timing {
+  color: var(--yellow);
+  font-weight: 1000;
 }
 
 .hero-title-line {
