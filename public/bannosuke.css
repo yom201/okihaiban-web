@@ -550,6 +550,21 @@ h3 {
   padding: 24px;
 }
 
+.camera-overview {
+  width: min(980px, 100%);
+  margin: clamp(32px, 5vw, 56px) auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(9, 31, 77, 0.16);
+  border-radius: 8px;
+  background: #061b46;
+  box-shadow: var(--shadow);
+}
+
+.camera-overview img {
+  width: 100%;
+  height: auto;
+}
+
 .camera-problem,
 .okihaiban-answer {
   display: grid;
