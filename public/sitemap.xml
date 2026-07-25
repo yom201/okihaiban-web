@@ -2,20 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://okihaiban.com/</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
   <url>
-    <loc>https://okihaiban.com/usecase-remote-check.html</loc>
+    <loc>https://okihaiban.com/usecase-remote-check</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
   <url>
-    <loc>https://okihaiban.com/usecase-theft-record.html</loc>
+    <loc>https://okihaiban.com/usecase-theft-record</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
   <url>
-    <loc>https://okihaiban.com/usecase-contactless-pickup.html</loc>
+    <loc>https://okihaiban.com/usecase-contactless-pickup</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
   <url>
-    <loc>https://okihaiban.com/privacy-policy.html</loc>
+    <loc>https://okihaiban.com/privacy-policy</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
   <url>
-    <loc>https://okihaiban.com/terms-of-use.html</loc>
+    <loc>https://okihaiban.com/terms-of-use</loc>
+    <lastmod>2026-07-25</lastmod>
   </url>
 </urlset>
