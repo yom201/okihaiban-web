@@ -1,0 +1,17 @@
+name: SEO route gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  seo-route-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check sitemap, canonical routes, redirects, and soft-404 guard
+        run: python3 tools/check_seo_routes.py

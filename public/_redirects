@@ -1,0 +1,5 @@
+# Retired public aliases. Keep each redirect to one permanent hop.
+/bannosuke / 301
+/bannosuke.html / 301
+/eula /terms-of-use 301
+/eula.html /terms-of-use 301
