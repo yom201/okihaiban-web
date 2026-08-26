@@ -76,12 +76,28 @@
                   <tr>
                     <td>サブスクリプションの購入・有効状態</td>
                     <td>有料機能の提供、購入の復元、利用資格の確認のため</td>
-                    <td>Apple App Storeおよび端末内</td>
+                    <td>Apple App Store、RevenueCatおよび端末内</td>
+                  </tr>
+                  <tr>
+                    <td>Googleアカウントの識別子（sub）、デバイスID、FCMトークン、端末認証用の情報（deviceSecret）</td>
+                    <td>端末の登録、認証および通知の配信のため</td>
+                    <td>運営者が管理するサーバ</td>
+                  </tr>
+                  <tr>
+                    <td>撮影を依頼できる回数のカウント</td>
+                    <td>撮影依頼機能の提供と利用回数の管理のため</td>
+                    <td>運営者が管理するサーバ</td>
+                  </tr>
+                  <tr>
+                    <td>撮影依頼の識別子（requestId）、Googleアカウントの識別子（sub）、処理状況（sent・成功・失敗）、作成日時（createdAt）、更新日時（updatedAt）、処理理由（reason）</td>
+                    <td>撮影依頼の処理と結果の確認のため</td>
+                    <td>運営者が管理するサーバ</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p class="legal-note">運営者は、GoogleアカウントのパスワードやApp Storeの決済カード情報を取得しません。</p>
+            <p class="legal-note">App Store Connectで申告しているユーザID、デバイスID、購入履歴および製品の操作は、いずれも本アプリの機能を提供するために利用し、利用者の情報に関連付けられます。これらの情報をトラッキングには使用しません。</p>
           </section>
 
           <section class="legal-section">
@@ -91,15 +107,18 @@
               <li>利用者がGoogle Drive連携を有効にした場合、選択または自動バックアップの対象となった記録が、利用者自身のGoogle Driveへ送信されます。</li>
               <li>利用者がGmail通知を有効にした場合、利用者自身のGoogleアカウントから同じメールアドレス宛てに、検知情報や画像が送信されます。</li>
               <li>写真アプリへの保存は、利用者が保存操作を行った場合に限り実行されます。</li>
+              <li>撮影した画像・動画は、運営者が管理するサーバには保存されません。</li>
             </ul>
           </section>
 
           <section class="legal-section">
             <h2>4. 外部サービス</h2>
-            <p>本アプリは、利用者が選択した機能の提供に必要な範囲で、次の外部サービスを利用します。</p>
+            <p>本アプリは、機能の提供に必要な範囲で、次の外部サービスを利用します。</p>
             <ul>
               <li>Google Sign-In、Google Drive API、Gmail API（Google LLC）</li>
+              <li>Firebase Cloud Messaging（通知の配信、Google LLC）</li>
               <li>Apple App Storeのアプリ内課金（Apple Inc.）</li>
+              <li>RevenueCat（サブスクリプションの状態管理、RevenueCat, Inc.）</li>
             </ul>
             <p>
               各サービスにおける情報の取り扱いは、
@@ -126,9 +145,9 @@
             <ul>
               <li>端末内の記録は、利用者が削除するか、本アプリを削除するまで保存されます。</li>
               <li>Google DriveまたはGmailに保存・送信された情報は、利用者自身のGoogleアカウントの設定と操作に従って管理されます。</li>
-              <li>購入情報は、Appleの定める保存期間と取り扱いに従います。</li>
+              <li>購入情報は、AppleおよびRevenueCatの定める保存期間と取り扱いに従います。</li>
             </ul>
-            <p>Google連携はアプリの設定から解除できます。端末内およびGoogleアカウント内の記録は、利用者自身で削除できます。</p>
+            <p>Google連携はアプリの設定から解除できます。アプリの設定にある「保存されたデータを削除」から、運営者が管理するサーバに保存された情報を削除できます。この操作では端末内の記録とGoogle Driveのバックアップは削除されないため、利用者自身で削除する必要があります。</p>
           </section>
 
           <section class="legal-section">
@@ -146,7 +165,7 @@
             <p>情報の取り扱いに関するお問い合わせは、<a href="mailto:support@ichitap.com">support@ichitap.com</a> までご連絡ください。</p>
           </section>
 
-          <p class="legal-date">制定日・最終更新日：2026年7月20日</p>
+          <p class="legal-date">制定日：2026年7月20日　最終更新日：2026年8月26日</p>
         </article>
       </section>
     </main>
