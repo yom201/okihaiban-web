@@ -496,6 +496,33 @@ h3 {
   gap: 12px;
 }
 
+.feature-visuals {
+  display: grid;
+  gap: clamp(28px, 5vw, 54px);
+  margin: 0 0 clamp(36px, 6vw, 68px);
+}
+
+.feature-main-visual,
+.feature-overview-visual {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feature-main-visual {
+  max-width: 980px;
+}
+
+.feature-overview-visual {
+  max-width: 900px;
+}
+
+.feature-main-visual img,
+.feature-overview-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .record-grid article {
   min-height: 254px;
   border: 1px solid rgba(9, 31, 77, 0.14);
