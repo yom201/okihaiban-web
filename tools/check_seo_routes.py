@@ -7,6 +7,7 @@ import argparse
 from dataclasses import dataclass, field
 from datetime import date
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 import sys
 from urllib.error import HTTPError
@@ -34,8 +35,14 @@ class Page:
     description: str = ""
     canonical: str = ""
     robots: str = ""
+    og_url: str = ""
+    og_image: str = ""
+    twitter_image: str = ""
     h1_count: int = 0
     hrefs: list[str] = field(default_factory=list)
+    ids: set[str] = field(default_factory=set)
+    images: list[tuple[str, str | None]] = field(default_factory=list)
+    json_ld: list[str] = field(default_factory=list)
 
 
 class PageParser(HTMLParser):
@@ -43,31 +50,53 @@ class PageParser(HTMLParser):
         super().__init__()
         self.page = Page()
         self._in_title = False
+        self._in_json_ld = False
+        self._json_ld_buffer = ""
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {name: value or "" for name, value in attrs}
+        if values.get("id"):
+            self.page.ids.add(values["id"])
         if tag == "title":
             self._in_title = True
         elif tag == "meta":
             name = values.get("name", "").lower()
+            property_name = values.get("property", "").lower()
             if name == "description":
                 self.page.description = values.get("content", "").strip()
             elif name == "robots":
                 self.page.robots = values.get("content", "").lower()
+            elif name == "twitter:image":
+                self.page.twitter_image = values.get("content", "").strip()
+            if property_name == "og:url":
+                self.page.og_url = values.get("content", "").strip()
+            elif property_name == "og:image":
+                self.page.og_image = values.get("content", "").strip()
         elif tag == "link" and values.get("rel", "").lower() == "canonical":
             self.page.canonical = values.get("href", "").strip()
         elif tag == "h1":
             self.page.h1_count += 1
         elif tag == "a" and values.get("href"):
             self.page.hrefs.append(values["href"])
+        elif tag == "img":
+            alt = values["alt"] if "alt" in values else None
+            self.page.images.append((values.get("src", "").strip(), alt))
+        elif tag == "script" and values.get("type", "").lower() == "application/ld+json":
+            self._in_json_ld = True
+            self._json_ld_buffer = ""
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
             self._in_title = False
+        elif tag == "script" and self._in_json_ld:
+            self._in_json_ld = False
+            self.page.json_ld.append(self._json_ld_buffer.strip())
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.page.title += data.strip()
+        if self._in_json_ld:
+            self._json_ld_buffer += data
 
 
 def parse_page(path: Path) -> Page:
@@ -117,6 +146,33 @@ def internal_route(href: str) -> str | None:
     return parsed.path or "/"
 
 
+def route_for_html(path: Path) -> str:
+    return "/" if path.name == "index.html" else f"/{path.stem}"
+
+
+def local_asset_path(url: str) -> Path | None:
+    parsed = urlparse(urljoin(f"{CANONICAL_ORIGIN}/", url))
+    if parsed.netloc != "okihaiban.com" or not parsed.path.startswith("/assets/"):
+        return None
+    return PUBLIC / parsed.path.lstrip("/")
+
+
+def sitemap_image_urls() -> list[str]:
+    root = ET.parse(PUBLIC / "sitemap.xml").getroot()
+    ns = {
+        "sm": "http://www.sitemaps.org/schemas/sitemap/0.9",
+        "image": "http://www.google.com/schemas/sitemap-image/1.1",
+    }
+    return [
+        value.strip()
+        for value in (
+            item.findtext("image:loc", default="", namespaces=ns)
+            for item in root.findall("sm:url/image:image", ns)
+        )
+        if value.strip()
+    ]
+
+
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):  # type: ignore[no-untyped-def]
         return None
@@ -157,6 +213,7 @@ def source_audit() -> tuple[list[str], list[str]]:
     pages: dict[str, Page] = {}
     incoming = {urlparse(url).path or "/": 0 for url in urls}
     titles: dict[str, str] = {}
+    descriptions: dict[str, str] = {}
     today = date.today()
 
     for loc, lastmod in entries:
@@ -180,8 +237,35 @@ def source_audit() -> tuple[list[str], list[str]]:
             titles[page.title] = route
         if not page.description:
             errors.append(f"missing meta description for {route}")
+        elif page.description in descriptions:
+            errors.append(f"duplicate sitemap description for {route} and {descriptions[page.description]}")
+        else:
+            descriptions[page.description] = route
+        if "noindex" in page.robots:
+            errors.append(f"sitemap route must not be noindex: {route}")
+        if "max-image-preview:large" not in page.robots:
+            errors.append(f"sitemap route must allow large image previews: {route}")
         if page.h1_count != 1:
             errors.append(f"expected one h1 for {route}, found {page.h1_count}")
+        if page.og_url and page.og_url != loc:
+            errors.append(f"og:url mismatch for {route}: {page.og_url}")
+        if route == "/":
+            expected_hero = f"{CANONICAL_ORIGIN}/assets/hero.png"
+            if page.og_image != expected_hero:
+                errors.append(f"homepage og:image must use the fixed hero image: {page.og_image or '[missing]'}")
+            if page.twitter_image != expected_hero:
+                errors.append(f"homepage twitter:image must use the fixed hero image: {page.twitter_image or '[missing]'}")
+        for raw_json in page.json_ld:
+            try:
+                json.loads(raw_json)
+            except json.JSONDecodeError as error:
+                errors.append(f"invalid JSON-LD for {route}: {error.msg}")
+        for src, alt in page.images:
+            if alt is None:
+                errors.append(f"image missing alt attribute for {route}: {src or '[missing src]'}")
+            asset = local_asset_path(src)
+            if asset is not None and not asset.exists():
+                errors.append(f"missing local image for {route}: {src}")
         try:
             modified = date.fromisoformat(lastmod)
             if modified > today:
@@ -189,12 +273,33 @@ def source_audit() -> tuple[list[str], list[str]]:
         except ValueError:
             errors.append(f"invalid sitemap lastmod for {route}: {lastmod or '[missing]'}")
 
+    parsed_html: dict[str, Page] = {}
     for html_path in PUBLIC.glob("*.html"):
         page = parse_page(html_path)
+        route = route_for_html(html_path)
+        parsed_html[route] = page
         for href in page.hrefs:
             route = internal_route(href)
             if route in incoming:
                 incoming[route] += 1
+
+    sitemap_routes = set(incoming)
+    for route, page in parsed_html.items():
+        if route == "/404" or "noindex" in page.robots:
+            continue
+        if route not in sitemap_routes:
+            errors.append(f"indexable HTML route missing from sitemap: {route}")
+
+    for source_route, page in parsed_html.items():
+        base_url = f"{CANONICAL_ORIGIN}{'/' if source_route == '/' else source_route}"
+        for href in page.hrefs:
+            parsed = urlparse(urljoin(base_url, href))
+            if parsed.netloc != "okihaiban.com" or not parsed.fragment:
+                continue
+            target_route = parsed.path or "/"
+            target_page = parsed_html.get(target_route)
+            if target_page is None or parsed.fragment not in target_page.ids:
+                errors.append(f"broken internal fragment: {source_route} -> {target_route}#{parsed.fragment}")
 
     for route, count in incoming.items():
         if route != "/" and count == 0:
@@ -219,8 +324,21 @@ def source_audit() -> tuple[list[str], list[str]]:
         if path.exists():
             errors.append(f"retired alias must not remain as an HTML asset: {path.relative_to(ROOT)}")
 
+    image_urls = sitemap_image_urls()
+    if not image_urls:
+        errors.append("sitemap.xml has no image entries")
+    for image_url in image_urls:
+        asset = local_asset_path(image_url)
+        if asset is None:
+            errors.append(f"non-canonical image sitemap URL: {image_url}")
+        elif not asset.exists():
+            errors.append(f"missing image sitemap asset: {image_url}")
+
     notes.append(f"SITEMAP_URLS={len(entries)}")
     notes.append(f"CANONICAL_TITLES={len(titles)}")
+    notes.append(f"UNIQUE_DESCRIPTIONS={len(descriptions)}")
+    notes.append(f"IMAGE_SITEMAP_URLS={len(image_urls)}")
+    notes.append("INTERNAL_FRAGMENTS=VALID")
     notes.append(f"PERMANENT_ALIASES={len(REQUIRED_ALIASES)}")
     notes.append("SOFT_404_GUARD=public/404.html")
     return errors, notes

@@ -1946,7 +1946,7 @@ h3 {
   }
 
   .problem-led-landing h1 {
-    font-size: clamp(2.35rem, 11.8vw, 3.7rem);
+    font-size: clamp(2.25rem, 9.2vw, 2.85rem);
   }
 
   .hero-question-list li {

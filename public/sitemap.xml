@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://okihaiban.com/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/hero.png</image:loc></image:image>
+    <image:image><image:loc>https://okihaiban.com/assets/feature-main.png</image:loc></image:image>
+    <image:image><image:loc>https://okihaiban.com/assets/overview.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/usecase-remote-check</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/usecase-remote-cafe-check.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/usecase-theft-record</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/usecase-theft-record.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/usecase-contactless-pickup</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/usecase-contactless-pickup.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/smartphone-mounts</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/door-mount-mosenvka-phone.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/package-theft-response</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/package-theft-response-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/phone-safety</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/phone-safety-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/privacy-policy</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://okihaiban.com/terms-of-use</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
 </urlset>
