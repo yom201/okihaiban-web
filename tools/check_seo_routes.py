@@ -323,10 +323,11 @@ def source_audit() -> tuple[list[str], list[str]]:
         "画像を受け取れない時は、端末側で撮影できたか、Googleアカウント連携と通信を確認してください。",
         "画質を確かめる前に、撮影できる条件を確認。",
         "※すべてのネットワークカメラより高画質になるとは限りません。",
+        "iPhoneはOSの制約により、アプリを前面に立ち上げた状態でないと監視もリモート撮影もできません。",
     )
     if any(copy in quality_source for copy in rejected_quality_copy):
         errors.append("removed image-quality copy must not return")
-    ios_condition = "iPhoneはOSの制約により、アプリを前面に立ち上げた状態でないと監視もリモート撮影もできません。"
+    ios_condition = "iPhoneはOSの制約により、監視やリモート撮影の利用には置き配番アプリを常に前面で立ち上げておく必要があります。"
     if quality_source.count(f"<strong>{ios_condition}</strong>") != 1:
         errors.append("image-quality page must show the exact bold iPhone condition once")
     quality_main = quality_source.partition("<main>")[2].partition("</main>")[0]
