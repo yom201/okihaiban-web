@@ -40,6 +40,7 @@ class Page:
     twitter_image: str = ""
     h1_count: int = 0
     hrefs: list[str] = field(default_factory=list)
+    main_hrefs: list[str] = field(default_factory=list)
     ids: set[str] = field(default_factory=set)
     images: list[tuple[str, str | None]] = field(default_factory=list)
     json_ld: list[str] = field(default_factory=list)
@@ -52,11 +53,14 @@ class PageParser(HTMLParser):
         self._in_title = False
         self._in_json_ld = False
         self._json_ld_buffer = ""
+        self._in_main = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {name: value or "" for name, value in attrs}
         if values.get("id"):
             self.page.ids.add(values["id"])
+        if tag == "main":
+            self._in_main = True
         if tag == "title":
             self._in_title = True
         elif tag == "meta":
@@ -78,6 +82,8 @@ class PageParser(HTMLParser):
             self.page.h1_count += 1
         elif tag == "a" and values.get("href"):
             self.page.hrefs.append(values["href"])
+            if self._in_main:
+                self.page.main_hrefs.append(values["href"])
         elif tag == "img":
             alt = values["alt"] if "alt" in values else None
             self.page.images.append((values.get("src", "").strip(), alt))
@@ -86,7 +92,9 @@ class PageParser(HTMLParser):
             self._json_ld_buffer = ""
 
     def handle_endtag(self, tag: str) -> None:
-        if tag == "title":
+        if tag == "main":
+            self._in_main = False
+        elif tag == "title":
             self._in_title = False
         elif tag == "script" and self._in_json_ld:
             self._in_json_ld = False
@@ -286,6 +294,10 @@ def source_audit() -> tuple[list[str], list[str]]:
     home_page = parsed_html.get("/")
     quality_route = "/network-camera-image-quality"
     quality_page = parsed_html.get(quality_route)
+    if home_page is None or not any(
+        internal_route(href) == quality_route for href in home_page.main_hrefs
+    ):
+        errors.append("homepage main content must link to the image-quality page for mobile visitors")
     indoor_detail = "見たいのは、部屋の「細部」です。"
     home_source = (PUBLIC / "index.html").read_text(encoding="utf-8")
     if (
@@ -358,6 +370,7 @@ def source_audit() -> tuple[list[str], list[str]]:
     notes.append(f"IMAGE_SITEMAP_URLS={len(image_urls)}")
     notes.append("INTERNAL_FRAGMENTS=VALID")
     notes.append("INDOOR_QUALITY_PLACEMENT=VALID")
+    notes.append("INDOOR_QUALITY_HOME_MAIN_LINK=VALID")
     notes.append(f"PERMANENT_ALIASES={len(REQUIRED_ALIASES)}")
     notes.append("SOFT_404_GUARD=public/404.html")
     return errors, notes

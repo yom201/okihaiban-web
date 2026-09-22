@@ -5,7 +5,7 @@
 >
   <url>
     <loc>https://okihaiban.com/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/hero.png</image:loc></image:image>
     <image:image><image:loc>https://okihaiban.com/assets/feature-main.png</image:loc></image:image>
     <image:image><image:loc>https://okihaiban.com/assets/overview.png</image:loc></image:image>
@@ -18,7 +18,9 @@
   <url>
     <loc>https://okihaiban.com/network-camera-image-quality</loc>
     <lastmod>2026-09-22</lastmod>
-    <image:image><image:loc>https://okihaiban.com/assets/usecase-remote-cafe-check.jpg</image:loc></image:image>
+    <image:image><image:loc>https://okihaiban.com/assets/quality-pet-high.webp</image:loc></image:image>
+    <image:image><image:loc>https://okihaiban.com/assets/quality-air-high.webp</image:loc></image:image>
+    <image:image><image:loc>https://okihaiban.com/assets/quality-faucet-high.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://okihaiban.com/usecase-theft-record</loc>

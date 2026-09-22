@@ -4,25 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ネットワークカメラの画質に満足できない時のリモート撮影 | 置き配番</title>
-    <meta name="description" content="既存のネットワークカメラの画質では室内の細部が見えにくい。置き配番でスマホに撮影を依頼し、Gmailに届くJPEG画像を拡大して確認する使い方と制約を紹介します。" />
+    <meta name="description" content="ネットワークカメラの画質に満足できない人へ。ペットの食べ残し、エアコンの運転ランプ、蛇口の水滴を低画質・高画質の生成イメージで比較。置き配番のリモート撮影の使い方と条件も紹介します。" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://okihaiban.com/network-camera-image-quality" />
     <meta property="og:site_name" content="置き配番" />
     <meta property="og:title" content="ネットワークカメラの画質に満足できない時 | 置き配番" />
-    <meta property="og:description" content="スマホで撮影したJPEGをGmailで開き、室内の見たい部分を拡大して確かめる。" />
-    <meta property="og:image" content="https://okihaiban.com/assets/usecase-remote-cafe-check.jpg" />
+    <meta property="og:description" content="ペットのご飯、エアコンのランプ、蛇口の水滴。見たい細部を低画質と高画質の生成イメージで比較。" />
+    <meta property="og:image" content="https://okihaiban.com/assets/quality-pet-og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://okihaiban.com/network-camera-image-quality" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
     <link rel="stylesheet" href="/bannosuke.css?v=20260922-1" />
-    <link rel="stylesheet" href="/network-camera-image-quality.css" />
+    <link rel="stylesheet" href="/network-camera-image-quality.css?v=20260922-4" />
   </head>
   <body class="usecase-detail quality-detail">
     <header class="site-header" aria-label="サイトヘッダー">
       <a class="brand" href="/" aria-label="置き配番トップへ"><img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" /></a>
       <nav class="nav-links" aria-label="ページ内ナビゲーション">
-        <a href="#remote-quality">撮影方法</a>
+        <a href="#compare">画質を比較</a>
         <a href="#quality-limits">利用時の条件</a>
         <a href="/">置き配番トップ</a>
       </nav>
@@ -39,6 +39,7 @@
               置き配番は、好きな時にご家庭へ設置したスマホへリモート撮影を依頼できます。
               <strong>撮影できた高画質なJPEG画像をあなたのGmailへ送信。すぐに送れない時は端末に残し、送れる状態になってから送信します。</strong>
             </p>
+            <a class="quality-jump" href="#compare">ペット・エアコン・蛇口の画像を見比べる ↓</a>
             <ul class="quality-benefits">
               <li>
                 <span>01</span>
@@ -55,35 +56,77 @@
             </ul>
           </div>
           <figure class="quality-visual">
-            <img src="/assets/usecase-remote-cafe-check.jpg" alt="外出先で自宅の撮影画像をスマートフォンから確認するイメージ" />
-            <figcaption>届いた画像をGmailで開き、見たい場所を拡大して確認。</figcaption>
+            <img src="/assets/quality-pet-high.webp" width="1536" height="1024" alt="ペットのフードボウルに残った粒が見える高画質の生成イメージ" />
+            <figcaption>細部まで見たい場面を、下の画像で比較できます。※生成イメージ</figcaption>
           </figure>
         </div>
-        <div class="section-inner scenario-grid" aria-label="高画質リモート撮影で確認しやすい例">
-          <article>
-            <span>AIR CONDITIONER</span>
-            <h3>エアコンの稼働状況</h3>
-            <p>運転ランプや表示が見える位置へスマホを向けて、消し忘れがないか確認。</p>
-          </article>
-          <article>
-            <span>WATER LEAK</span>
-            <h3>蛇口まわりの水漏れ</h3>
-            <p>水滴やシンクまわりなど、低画質では判断しにくい細かな変化を拡大して確認。</p>
-          </article>
-          <article>
-            <span>PET FOOD</span>
-            <h3>ペットが食べたご飯の量</h3>
-            <p>フードボウルが見える位置から撮影し、どれくらい残っているかを外出先で確認。</p>
-          </article>
+      </section>
+      <section class="section-band quality-compare-band" id="compare" aria-labelledby="compare-title">
+        <div class="section-inner">
+          <p class="section-kicker">SEE THE DIFFERENCE</p>
+          <h2 id="compare-title">見たい細部を、画像で見比べる。</h2>
+          <p class="quality-compare-lead">同じ場面をもとにした、低画質と高画質の比較イメージです。画像を押すと拡大できます。</p>
+          <p class="quality-simulation-note">※画像は生成した比較イメージです。既存のネットワークカメラや置き配番で実際に撮影した写真ではなく、実際の画質差を保証するものではありません。</p>
+          <div class="quality-comparison-list">
+            <article class="quality-case" aria-labelledby="pet-case-title">
+              <div class="quality-case-heading">
+                <span>01 / PET FOOD</span>
+                <h3 id="pet-case-title">ペットのご飯、どれだけ残った？</h3>
+                <p>フードボウルに残った粒や細かな食べかすを見て、食べた量を確かめたい。</p>
+              </div>
+              <div class="quality-image-pair">
+                <figure>
+                  <a href="/assets/quality-pet-low.webp" target="_blank" rel="noopener" aria-label="ペットの食べ残しの低画質イメージを拡大して見る"><img src="/assets/quality-pet-low.webp" width="1536" height="1024" loading="lazy" alt="低画質の比較用生成画像。ペットのボウルに残った粒の輪郭がぼやけている" /><span class="quality-zoom pet-focus" style="background-image:url('/assets/quality-pet-low.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>低画質のイメージ</strong><small>残った粒の輪郭が分かりにくい</small></figcaption>
+                </figure>
+                <figure>
+                  <a href="/assets/quality-pet-high.webp" target="_blank" rel="noopener" aria-label="ペットの食べ残しの高画質イメージを拡大して見る"><img src="/assets/quality-pet-high.webp" width="1536" height="1024" loading="lazy" alt="高画質の比較用生成画像。ペットのボウルに残った粒と食べかすが見える" /><span class="quality-zoom pet-focus" style="background-image:url('/assets/quality-pet-high.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>高画質のイメージ</strong><small>粒や食べかすを確かめやすい</small></figcaption>
+                </figure>
+              </div>
+            </article>
+            <article class="quality-case" aria-labelledby="air-case-title">
+              <div class="quality-case-heading">
+                <span>02 / AIR CONDITIONER</span>
+                <h3 id="air-case-title">エアコン、つけっぱなし？</h3>
+                <p>本体の小さな運転ランプや吹き出し口を見て、稼働状況を確かめたい。</p>
+              </div>
+              <div class="quality-image-pair">
+                <figure>
+                  <a href="/assets/quality-air-low.webp" target="_blank" rel="noopener" aria-label="エアコンの低画質イメージを拡大して見る"><img src="/assets/quality-air-low.webp" width="1536" height="1024" loading="lazy" alt="低画質の比較用生成画像。室内のエアコンのランプと吹き出し口がぼやけている" /><span class="quality-zoom air-focus" style="background-image:url('/assets/quality-air-low.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>低画質のイメージ</strong><small>小さなランプが見分けにくい</small></figcaption>
+                </figure>
+                <figure>
+                  <a href="/assets/quality-air-high.webp" target="_blank" rel="noopener" aria-label="エアコンの高画質イメージを拡大して見る"><img src="/assets/quality-air-high.webp" width="1536" height="1024" loading="lazy" alt="高画質の比較用生成画像。室内のエアコンの運転ランプと吹き出し口が見える" /><span class="quality-zoom air-focus" style="background-image:url('/assets/quality-air-high.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>高画質のイメージ</strong><small>ランプと吹き出し口を確認しやすい</small></figcaption>
+                </figure>
+              </div>
+            </article>
+            <article class="quality-case" aria-labelledby="faucet-case-title">
+              <div class="quality-case-heading">
+                <span>03 / WATER LEAK</span>
+                <h3 id="faucet-case-title">蛇口から、水滴が落ちていない？</h3>
+                <p>蛇口の先やシンクに残る小さな水滴を見て、水漏れがないか確かめたい。</p>
+              </div>
+              <div class="quality-image-pair">
+                <figure>
+                  <a href="/assets/quality-faucet-low.webp" target="_blank" rel="noopener" aria-label="蛇口の低画質イメージを拡大して見る"><img src="/assets/quality-faucet-low.webp" width="1536" height="1024" loading="lazy" alt="低画質の比較用生成画像。蛇口の先の水滴がぼやけている" /><span class="quality-zoom faucet-focus" style="background-image:url('/assets/quality-faucet-low.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>低画質のイメージ</strong><small>水滴が背景になじんで見えにくい</small></figcaption>
+                </figure>
+                <figure>
+                  <a href="/assets/quality-faucet-high.webp" target="_blank" rel="noopener" aria-label="蛇口の高画質イメージを拡大して見る"><img src="/assets/quality-faucet-high.webp" width="1536" height="1024" loading="lazy" alt="高画質の比較用生成画像。蛇口の先とシンクの水滴が見える" /><span class="quality-zoom faucet-focus" style="background-image:url('/assets/quality-faucet-high.webp')"><b>細部を拡大</b></span><span class="quality-open">画像を拡大 ↗</span></a>
+                  <figcaption><strong>高画質のイメージ</strong><small>蛇口の先の小さな水滴まで見やすい</small></figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
         </div>
-        <p class="section-inner quality-note">
-          ※すべてのネットワークカメラより高画質になるとは限りません。確認できる内容と画質は、設置するスマホのカメラ性能・撮影設定・距離・明るさ・設置角度により異なります。Androidは見守り中なら画面が消えていても撮影できることがありますが、スマホが節電のためにアプリを止めていると撮影できません。見守っていない時はアプリを開いておく必要があります。iPhoneはOSの制約により、アプリを開いたままにする必要があります。見守り中でも撮影できないことがあります。Gmail送信にはGoogleアカウント連携と通信環境が必要です。写真をすぐ送れない時は端末に残し、送れる状態になってから送るため、到着が遅れることがあります。
-        </p>
       </section>
       <section class="section-band quality-followup" id="quality-limits" aria-labelledby="quality-followup-title">
         <div class="section-inner">
           <h2 id="quality-followup-title">画質を確かめる前に、撮影できる条件を確認。</h2>
           <p>撮影するスマホを見たい場所へ向け、明るさ・距離・通信状態を確認してください。エアコンの表示や細かな水滴まで必ず読み取れるという保証はありません。画像を受け取れない時は、端末側で撮影できたか、Googleアカウント連携と通信を確認してください。</p>
+          <p class="quality-note">※すべてのネットワークカメラより高画質になるとは限りません。確認できる内容と画質は、設置するスマホのカメラ性能・撮影設定・距離・明るさ・設置角度により異なります。Androidは見守り中なら画面が消えていても撮影できることがありますが、スマホが節電のためにアプリを止めていると撮影できません。見守っていない時はアプリを開いておく必要があります。iPhoneはOSの制約により、アプリを開いたままにする必要があります。見守り中でも撮影できないことがあります。Gmail送信にはGoogleアカウント連携と通信環境が必要です。写真をすぐ送れない時は端末に残し、送れる状態になってから送るため、到着が遅れることがあります。</p>
           <div class="quality-actions">
             <a class="button primary" href="https://play.google.com/store/apps/details?id=com.okihaiban.okihaibanApp">Google Playで置き配番を見る</a>
             <a class="button secondary" href="/">置き配の見守りを見る</a>

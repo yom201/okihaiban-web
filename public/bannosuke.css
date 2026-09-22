@@ -1906,6 +1906,16 @@ h3 {
   font-weight: 720;
 }
 
+.feature-summary-grid a {
+  width: fit-content;
+  margin-top: 7px;
+  color: #0a3273;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 1100px) {
   .problem-led-landing .hero {
     grid-template-columns: minmax(0, 1fr) minmax(400px, 0.78fr);
