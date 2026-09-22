@@ -189,6 +189,45 @@ h3 {
   margin-top: 34px;
 }
 
+.play-store-entry {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+}
+
+.play-store-entry:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+.play-store-entry img {
+  width: 176px;
+  height: 176px;
+  flex: none;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.play-store-entry-copy {
+  display: grid;
+  gap: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.play-store-entry-copy strong {
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
 .button {
   display: inline-flex;
   min-height: 50px;
@@ -1385,6 +1424,16 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .play-store-entry {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .play-store-entry img {
+    width: 128px;
+    height: 128px;
+  }
+
   .phone-safety-entry .button {
     width: 100%;
   }
