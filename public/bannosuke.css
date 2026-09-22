@@ -1865,11 +1865,9 @@ h3 {
   color: #111a2b;
 }
 
-.feature-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
-  gap: clamp(40px, 7vw, 96px);
-  align-items: center;
+.feature-intro h2 {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  word-break: normal;
 }
 
 .feature-intro > div:first-child > p:last-child {
@@ -1878,36 +1876,6 @@ h3 {
   color: #4c596c;
   font-size: clamp(1rem, 1.9vw, 1.2rem);
   font-weight: 760;
-}
-
-.feature-badge {
-  display: grid;
-  justify-items: center;
-  border: 1px solid rgba(9, 31, 77, 0.14);
-  border-radius: 14px;
-  background: #f6f8ff;
-  padding: 24px;
-  box-shadow: 0 18px 50px rgba(8, 25, 61, 0.11);
-  text-align: center;
-}
-
-.feature-badge img {
-  width: min(190px, 100%);
-  height: auto;
-}
-
-.feature-badge strong {
-  margin-top: 16px;
-  color: #092d6b;
-  font-size: 1.42rem;
-  font-weight: 1000;
-}
-
-.feature-badge span {
-  margin-top: 3px;
-  color: #58667b;
-  font-size: 0.9rem;
-  font-weight: 850;
 }
 
 .feature-summary-grid {
@@ -1953,7 +1921,6 @@ h3 {
   .problem-grid,
   .quality-layout,
   .scenario-grid,
-  .feature-intro,
   .feature-summary-grid {
     grid-template-columns: 1fr;
   }
@@ -1981,11 +1948,6 @@ h3 {
   .problem-card img {
     height: 100%;
     min-height: 330px;
-  }
-
-  .feature-badge {
-    width: min(360px, 100%);
-    justify-self: start;
   }
 }
 
@@ -2029,9 +1991,5 @@ h3 {
 
   .scenario-grid article {
     min-height: 0;
-  }
-
-  .feature-badge {
-    width: 100%;
   }
 }
