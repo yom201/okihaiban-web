@@ -329,6 +329,23 @@ def source_audit() -> tuple[list[str], list[str]]:
     ios_condition = "iPhoneはOSの制約により、アプリを前面に立ち上げた状態でないと監視もリモート撮影もできません。"
     if quality_source.count(f"<strong>{ios_condition}</strong>") != 1:
         errors.append("image-quality page must show the exact bold iPhone condition once")
+    quality_main = quality_source.partition("<main>")[2].partition("</main>")[0]
+    required_search_phrases = (
+        "ネットワークカメラ",
+        "監視カメラ",
+        "画質",
+        "不満",
+        "高画質ネットワークカメラ",
+        "映像が粗い",
+        "ぼやける",
+    )
+    if not quality_main or any(phrase not in quality_main for phrase in required_search_phrases):
+        errors.append("image-quality main content must address the camera quality search intent")
+    if quality_page is not None and (
+        any(phrase not in quality_page.title for phrase in ("ネットワークカメラ", "監視カメラ", "画質", "不満"))
+        or "高画質ネットワークカメラ" not in quality_page.description
+    ):
+        errors.append("image-quality search title and description must reflect the page content")
     room_figure = re.search(r'<figure class="quality-room-image">(.*?)</figure>', quality_source, re.DOTALL)
     if room_figure is None or "<a " in room_figure.group(1):
         errors.append("room image must not link to a non-enlarging image view")

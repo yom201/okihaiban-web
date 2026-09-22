@@ -11,7 +11,7 @@
 }
 
 .quality-detail .quality-copy h1 {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 0 20px;
   color: #fff;
   font-size: clamp(2rem, 3.3vw, 3rem);
