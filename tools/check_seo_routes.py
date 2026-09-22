@@ -283,6 +283,24 @@ def source_audit() -> tuple[list[str], list[str]]:
             if route in incoming:
                 incoming[route] += 1
 
+    home_page = parsed_html.get("/")
+    quality_route = "/network-camera-image-quality"
+    quality_page = parsed_html.get(quality_route)
+    indoor_detail = "見たいのは、部屋の「細部」です。"
+    home_source = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    if (
+        (home_page is not None and "remote-quality" in home_page.ids)
+        or "quality-band" in home_source
+        or indoor_detail in home_source
+    ):
+        errors.append("indoor image-quality use case must not appear on the parcel-monitoring homepage")
+    if (
+        quality_page is None
+        or "remote-quality" not in quality_page.ids
+        or indoor_detail not in route_file(quality_route).read_text(encoding="utf-8")
+    ):
+        errors.append("indoor image-quality use case must appear on its dedicated page")
+
     sitemap_routes = set(incoming)
     for route, page in parsed_html.items():
         if route == "/404" or "noindex" in page.robots:
@@ -339,6 +357,7 @@ def source_audit() -> tuple[list[str], list[str]]:
     notes.append(f"UNIQUE_DESCRIPTIONS={len(descriptions)}")
     notes.append(f"IMAGE_SITEMAP_URLS={len(image_urls)}")
     notes.append("INTERNAL_FRAGMENTS=VALID")
+    notes.append("INDOOR_QUALITY_PLACEMENT=VALID")
     notes.append(f"PERMANENT_ALIASES={len(REQUIRED_ALIASES)}")
     notes.append("SOFT_404_GUARD=public/404.html")
     return errors, notes
