@@ -1,0 +1,44 @@
+.quality-detail .quality-band {
+  padding-top: clamp(130px, 12vw, 176px);
+}
+
+.quality-detail .quality-copy h1 {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.2;
+}
+
+.quality-detail .quality-copy h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.9vw, 2.45rem);
+}
+
+.quality-followup {
+  background: #fff;
+  color: #15233c;
+}
+
+.quality-followup h2 {
+  margin: 0 0 18px;
+  color: #15233c;
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+
+.quality-followup p {
+  max-width: 850px;
+  font-size: 1.05rem;
+}
+
+.quality-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.quality-actions .secondary {
+  border-color: #0b3273;
+  color: #0b3273;
+}

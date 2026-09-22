@@ -16,6 +16,11 @@
     <image:image><image:loc>https://okihaiban.com/assets/usecase-remote-cafe-check.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://okihaiban.com/network-camera-image-quality</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/usecase-remote-cafe-check.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://okihaiban.com/usecase-theft-record</loc>
     <lastmod>2026-08-29</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/usecase-theft-record.jpg</image:loc></image:image>
