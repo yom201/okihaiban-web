@@ -9,6 +9,7 @@ from datetime import date
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 import sys
 from urllib.error import HTTPError
 from urllib.parse import urljoin, urlparse
@@ -317,9 +318,20 @@ def source_audit() -> tuple[list[str], list[str]]:
     rejected_quality_copy = (
         "細部まで見たい場面を、下の画像で比較できます。※生成イメージ",
         "ペット・エアコン・蛇口の画像を見比べる ↓",
+        "画像を押すと拡大できます。",
+        "※画像は生成イメージです。置き配番で実際に撮影した写真ではありません。",
+        "画像を受け取れない時は、端末側で撮影できたか、Googleアカウント連携と通信を確認してください。",
+        "画質を確かめる前に、撮影できる条件を確認。",
+        "※すべてのネットワークカメラより高画質になるとは限りません。",
     )
     if any(copy in quality_source for copy in rejected_quality_copy):
         errors.append("removed image-quality copy must not return")
+    ios_condition = "iPhoneはOSの制約により、アプリを前面に立ち上げた状態でないと監視もリモート撮影もできません。"
+    if quality_source.count(f"<strong>{ios_condition}</strong>") != 1:
+        errors.append("image-quality page must show the exact bold iPhone condition once")
+    room_figure = re.search(r'<figure class="quality-room-image">(.*?)</figure>', quality_source, re.DOTALL)
+    if room_figure is None or "<a " in room_figure.group(1):
+        errors.append("room image must not link to a non-enlarging image view")
     if quality_page is not None:
         room_images = {src for src, _ in quality_page.images if src.startswith("/assets/quality-")}
         if room_images != {"/assets/quality-room-high.webp"}:

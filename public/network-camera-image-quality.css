@@ -43,14 +43,6 @@
   font-weight: 800;
 }
 
-.quality-simulation-note {
-  max-width: 980px;
-  margin: 10px 0 0;
-  color: #52627a;
-  font-size: 0.88rem;
-  line-height: 1.65;
-}
-
 .quality-room-image {
   overflow: hidden;
   margin: 34px 0 0;
@@ -60,19 +52,10 @@
   box-shadow: 0 12px 34px rgba(9, 31, 77, 0.07);
 }
 
-.quality-room-image a {
-  display: block;
-}
-
 .quality-room-image img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.quality-room-image a:focus-visible {
-  outline: 3px solid #0b57c2;
-  outline-offset: -3px;
 }
 
 .quality-detail-grid {
@@ -124,28 +107,17 @@
 }
 
 .quality-followup {
+  padding-block: clamp(40px, 6vw, 72px);
   background: #fff;
   color: #15233c;
 }
 
-.quality-followup h2 {
-  margin: 0 0 18px;
-  color: #15233c;
-  font-size: clamp(1.65rem, 3vw, 2.4rem);
-}
-
-.quality-followup p {
+.quality-followup .ios-condition {
   max-width: 850px;
-  font-size: 1.05rem;
-}
-
-.quality-followup .quality-note {
-  max-width: 1000px;
-  margin-top: 24px;
-  color: #5c6878;
-  font-size: 0.88rem;
-  font-weight: 650;
-  line-height: 1.7;
+  margin: 0;
+  color: #15233c;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.6;
 }
 
 .quality-actions {
