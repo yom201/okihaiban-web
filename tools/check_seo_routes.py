@@ -312,6 +312,25 @@ def source_audit() -> tuple[list[str], list[str]]:
         or indoor_detail not in route_file(quality_route).read_text(encoding="utf-8")
     ):
         errors.append("indoor image-quality use case must appear on its dedicated page")
+    quality_path = route_file(quality_route)
+    quality_source = quality_path.read_text(encoding="utf-8") if quality_path.exists() else ""
+    rejected_quality_copy = (
+        "細部まで見たい場面を、下の画像で比較できます。※生成イメージ",
+        "ペット・エアコン・蛇口の画像を見比べる ↓",
+    )
+    if any(copy in quality_source for copy in rejected_quality_copy):
+        errors.append("removed image-quality copy must not return")
+    if quality_page is not None:
+        room_images = {src for src, _ in quality_page.images if src.startswith("/assets/quality-")}
+        if room_images != {"/assets/quality-room-high.webp"}:
+            errors.append("image-quality page must use only the approved high-quality room image")
+    if "低画質" in quality_source or "画質比較" in quality_source or "画質比較" in home_source:
+        errors.append("low-quality comparison wording must not return")
+    quality_css = (PUBLIC / "network-camera-image-quality.css").read_text(encoding="utf-8")
+    if "quality-room-low.webp" in quality_source or "quality-room-low.webp" in quality_css:
+        errors.append("low-quality simulated image must not appear on the page")
+    if any(f"quality-{subject}-" in quality_source for subject in ("pet", "air", "faucet")):
+        errors.append("old near-subject comparison images must not return")
 
     sitemap_routes = set(incoming)
     for route, page in parsed_html.items():
@@ -371,6 +390,7 @@ def source_audit() -> tuple[list[str], list[str]]:
     notes.append("INTERNAL_FRAGMENTS=VALID")
     notes.append("INDOOR_QUALITY_PLACEMENT=VALID")
     notes.append("INDOOR_QUALITY_HOME_MAIN_LINK=VALID")
+    notes.append("INDOOR_QUALITY_HIGH_IMAGE_ONLY=VALID")
     notes.append(f"PERMANENT_ALIASES={len(REQUIRED_ALIASES)}")
     notes.append("SOFT_404_GUARD=public/404.html")
     return errors, notes

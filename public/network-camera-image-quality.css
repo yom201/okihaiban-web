@@ -2,6 +2,14 @@
   padding-top: clamp(130px, 12vw, 176px);
 }
 
+.quality-detail .quality-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.quality-detail .quality-benefits {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .quality-detail .quality-copy h1 {
   max-width: 760px;
   margin: 0 0 20px;
@@ -13,23 +21,6 @@
 .quality-detail .quality-copy h2 {
   margin: 0;
   font-size: clamp(1.55rem, 2.9vw, 2.45rem);
-}
-
-.quality-jump {
-  display: inline-flex;
-  margin-top: 22px;
-  border: 2px solid #ffe300;
-  border-radius: 9px;
-  padding: 12px 18px;
-  color: #ffe300;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.quality-jump:hover,
-.quality-jump:focus-visible {
-  background: #ffe300;
-  color: #071c3d;
 }
 
 .quality-compare-band {
@@ -60,135 +51,76 @@
   line-height: 1.65;
 }
 
-.quality-comparison-list {
-  display: grid;
-  gap: 28px;
-  margin-top: 36px;
-}
-
-.quality-case {
+.quality-room-image {
+  overflow: hidden;
+  margin: 34px 0 0;
   border: 1px solid #d6e0f0;
-  border-radius: 18px;
+  border-radius: 14px;
   background: #fff;
-  padding: clamp(18px, 3vw, 34px);
   box-shadow: 0 12px 34px rgba(9, 31, 77, 0.07);
 }
 
-.quality-case-heading > span {
-  color: #0c4ca5;
-  font-size: 0.82rem;
-  font-weight: 1000;
-  letter-spacing: 0.08em;
-}
-
-.quality-case h3 {
-  margin: 8px 0;
-  color: #102646;
-  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
-}
-
-.quality-case-heading p {
-  margin: 0 0 22px;
-  color: #485a73;
-  font-weight: 750;
-}
-
-.quality-image-pair {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.quality-image-pair figure {
-  overflow: hidden;
-  margin: 0;
-  border: 1px solid #d4deec;
-  border-radius: 12px;
-  background: #f5f7fb;
-}
-
-.quality-image-pair figure:last-child {
-  border: 2px solid #d3b400;
-}
-
-.quality-image-pair a {
+.quality-room-image a {
   display: block;
-  position: relative;
-  overflow: hidden;
 }
 
-.quality-image-pair img {
+.quality-room-image img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
 }
 
-.quality-zoom {
-  display: block;
-  position: relative;
-  height: 132px;
-  border-top: 3px solid #fff;
-  background-repeat: no-repeat;
-  background-size: 360% auto;
-}
-
-.quality-zoom.pet-focus {
-  background-position: 50% 58%;
-}
-
-.quality-zoom.air-focus {
-  background-position: 65% 24%;
-}
-
-.quality-zoom.faucet-focus {
-  background-position: 50% 34%;
-}
-
-.quality-zoom b {
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  border-radius: 5px;
-  background: rgba(5, 20, 45, 0.84);
-  padding: 4px 8px;
-  color: #fff;
-  font-size: 0.76rem;
-}
-
-.quality-image-pair a > .quality-open {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 6px;
-  background: rgba(5, 20, 45, 0.84);
-  padding: 5px 9px;
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.quality-image-pair a:focus-visible {
+.quality-room-image a:focus-visible {
   outline: 3px solid #0b57c2;
   outline-offset: -3px;
 }
 
-.quality-image-pair figcaption {
+.quality-detail-grid {
   display: grid;
-  gap: 2px;
-  padding: 13px 16px 15px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
 }
 
-.quality-image-pair figcaption strong {
-  color: #132b50;
-  font-size: 1.02rem;
+.quality-detail-card {
+  min-width: 0;
+  border: 1px solid #d6e0f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 18px;
 }
 
-.quality-image-pair figcaption small {
-  color: #52627a;
-  font-size: 0.85rem;
-  font-weight: 700;
+.quality-detail-card h3 {
+  margin: 0 0 7px;
+  color: #102646;
+  font-size: 1.3rem;
+}
+
+.quality-detail-card p {
+  margin: 0 0 16px;
+  color: #485a73;
+  font-weight: 750;
+}
+
+.quality-detail-crop {
+  display: block;
+  height: 220px;
+  border-radius: 8px;
+  background-image: url('/assets/quality-room-high.webp');
+  background-repeat: no-repeat;
+  background-size: 420% auto;
+}
+
+.quality-detail-crop.pet-focus {
+  background-position: 70% 67%;
+}
+
+.quality-detail-crop.air-focus {
+  background-position: 78% 9%;
+}
+
+.quality-detail-crop.faucet-focus {
+  background-position: 21% 32%;
 }
 
 .quality-followup {
@@ -229,13 +161,12 @@
 }
 
 @media (max-width: 720px) {
-  .quality-image-pair {
+  .quality-detail .quality-benefits,
+  .quality-detail-grid {
     grid-template-columns: 1fr;
   }
 
-  .quality-jump {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+  .quality-detail-crop {
+    height: 220px;
   }
 }
