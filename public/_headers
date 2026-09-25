@@ -8,3 +8,9 @@
 
 /tokushoho.html
   X-Robots-Tag: noindex, nofollow, noarchive
+
+/remote
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/remote.html
+  X-Robots-Tag: noindex, nofollow, noarchive
