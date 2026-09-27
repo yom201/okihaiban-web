@@ -26,7 +26,7 @@
     <link rel="canonical" href="https://okihaiban.com/" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
     <link rel="preload" href="/assets/hero.png" as="image" />
-    <link rel="stylesheet" href="/bannosuke.css?v=20260922-4" />
+    <link rel="stylesheet" href="/bannosuke.css?v=20260927-state-change-2" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -168,7 +168,7 @@
             <p class="section-kicker">FEATURES</p>
             <h2 id="how-title">ここから、置き配番の機能です。</h2>
             <p class="section-lead">
-              玄関前の動きを前後で残す見守りと、好きな時に1枚撮るリモート撮影。目的に合わせて使い分けられます。
+              玄関前の動きを前後で残す見守りと、好きな時に1枚の撮影を依頼するリモート撮影。目的に合わせて使い分けられます。
             </p>
           </div>
           <div class="feature-visuals" aria-label="置き配番の機能説明画像">
@@ -216,9 +216,48 @@
             </article>
           </div>
           <div class="feature-summary-grid">
-            <article><strong>リモート撮影</strong><span>外出先から、好きな時に1枚撮影</span><a href="/network-camera-image-quality">室内の撮影イメージを見る →</a></article>
+            <article><strong>リモート撮影</strong><span>外出先から、好きな時に1枚の撮影を依頼</span><a href="/network-camera-image-quality">室内の撮影イメージを見る →</a></article>
             <article><strong>Gmail通知</strong><span>撮影画像や動きの通知をメールで確認</span></article>
             <article><strong>Google Drive</strong><span>必要に応じて記録のバックアップを保存</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band state-change-band" aria-labelledby="state-change-title">
+        <div class="section-inner">
+          <div class="state-change-feature">
+            <p class="state-change-label">選べる検知方式</p>
+            <h3 id="state-change-title">「状態変化検知」モードを追加</h3>
+            <div class="state-change-copy">
+              <p>基本モードである「侵入検知」は、監視エリア内の動きを検知して記録します。</p>
+              <p>「状態変化検知」は、一時的な人の通過や動きだけでは通知せず、直前に記録した景色から、落ち着いた後も残る変化を検知したときにメールで知らせます。</p>
+              <p>変化前後の画像を保存し、動きを伴う場合は動画も記録します。人の通過が多く、荷物が置かれるなど監視エリアの変化を知りたい場面に向いています。</p>
+            </div>
+            <div class="state-change-visuals" aria-label="状態変化検知の利用イメージ">
+              <figure>
+                <img
+                  src="/assets/state-change-before.png"
+                  width="1086"
+                  height="1448"
+                  loading="lazy"
+                  decoding="async"
+                  alt="状態変化検知前のイメージ。人が通行する玄関前に荷物は置かれていない"
+                />
+                <figcaption>変化前：人が通過しても、景色に変化が残らない場合</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/assets/state-change-after.png"
+                  width="1086"
+                  height="1448"
+                  loading="lazy"
+                  decoding="async"
+                  alt="状態変化検知後のイメージ。人の通過後も玄関前に荷物が置かれている"
+                />
+                <figcaption>変化後：荷物が置かれ、落ち着いた後も変化が残る場合</figcaption>
+              </figure>
+            </div>
+            <p class="state-change-image-note">画像は利用場面を示す生成イメージです。実際の検知画面や撮影結果ではありません。</p>
           </div>
         </div>
       </section>

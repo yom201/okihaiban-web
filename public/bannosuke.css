@@ -562,6 +562,76 @@ h3 {
   height: auto;
 }
 
+.state-change-band {
+  background: #eef3fb;
+  color: #111a2b;
+}
+
+.state-change-feature {
+  border: 1px solid rgba(9, 31, 77, 0.14);
+  border-radius: 18px;
+  background: #ffffff;
+  padding: clamp(24px, 4vw, 48px);
+  box-shadow: 0 18px 50px rgba(8, 25, 61, 0.11);
+}
+
+.state-change-label {
+  margin: 0 0 10px;
+  color: #0d47a1;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.state-change-feature h3 {
+  margin: 0;
+  color: #0a3273;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+}
+
+.state-change-copy {
+  display: grid;
+  gap: 10px;
+  max-width: 900px;
+  margin: 20px 0 28px;
+}
+
+.state-change-copy p {
+  margin: 0;
+  color: #34435b;
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  line-height: 1.85;
+}
+
+.state-change-visuals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.state-change-visuals figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.state-change-visuals img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.state-change-visuals figcaption {
+  margin-top: 12px;
+  color: #34435b;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.state-change-image-note {
+  margin: 18px 0 0;
+  color: #57657a;
+  font-size: 0.84rem;
+}
+
 .record-grid article {
   min-height: 254px;
   border: 1px solid rgba(9, 31, 77, 0.14);
@@ -1962,6 +2032,10 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .state-change-visuals {
+    grid-template-columns: 1fr;
+  }
+
   .problem-led-landing .hero {
     padding-top: 104px;
   }
