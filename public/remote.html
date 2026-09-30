@@ -215,7 +215,7 @@
     function initGoogle() {
       if (!window.google?.accounts?.id) { setTimeout(initGoogle, 200); return; }
       google.accounts.id.initialize({ client_id:CLIENT_ID, callback:onCredential, auto_select:false });
-      google.accounts.id.renderButton($('google-button'), { theme:'outline', size:'large', shape:'pill', text:'signin_with' });
+      google.accounts.id.renderButton($('google-button'), { theme:'outline', size:'large', shape:'pill', text:'signin_with', width:Math.min(400, Math.max(240, $('google-button').clientWidth || 320)) });
     }
     $('lang').addEventListener('change', event => { lang = event.target.value; render(); });
     $('shoot').addEventListener('click', shoot);
