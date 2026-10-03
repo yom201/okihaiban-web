@@ -2077,3 +2077,22 @@ h3 {
     min-height: 0;
   }
 }
+
+/* Reading lists in the detailed use-case guides. */
+.guide-band .guide-list {
+  margin: 18px 0;
+  padding-left: 1.5em;
+}
+
+.guide-band .guide-list > li + li {
+  margin-top: 12px;
+}
+
+.guide-band .guide-list p {
+  margin: 10px 0 0;
+}
+
+.guide-band a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
