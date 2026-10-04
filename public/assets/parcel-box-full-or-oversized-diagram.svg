@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+<rect width="720" height="620" rx="20" fill="#061638"/>
+<g fill="#09245a" stroke="#f7fbff" stroke-width="3">
+<rect x="25" y="28" width="325" height="555" rx="16"/>
+<rect x="370" y="28" width="325" height="555" rx="16"/>
+</g>
+<g fill="none" stroke="#f7fbff" stroke-width="4" stroke-linejoin="round">
+<rect x="82" y="135" width="205" height="195" rx="4"/><path d="M185 135V330 M82 232H287"/>
+<rect x="100" y="155" width="66" height="58"/><path d="M133 155V174"/>
+<rect x="204" y="155" width="65" height="58"/><path d="M236 155V174"/>
+<rect x="100" y="252" width="66" height="58"/><path d="M133 252V272"/>
+<rect x="204" y="252" width="65" height="58"/><path d="M236 252V272"/>
+<rect x="465" y="135" width="140" height="135" rx="4"/>
+</g>
+<g fill="none" stroke="#ffe300" stroke-width="5" stroke-linejoin="round">
+<rect x="412" y="293" width="235" height="70"/><path d="M530 293V320"/>
+<path d="M187 377V446 M172 431L187 446 202 431 M533 392V446 M518 431L533 446 548 431"/>
+</g>
+<g font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="32" font-weight="700" fill="#f7fbff" text-anchor="middle"><text x="187" y="91">満杯</text><text x="533" y="91">サイズ不足</text><text x="187" y="512">日時・場所を見直す</text><text x="533" y="512">受け取り方を変える</text></g>
+</svg>

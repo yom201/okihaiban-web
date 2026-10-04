@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+  <rect width="720" height="620" rx="20" fill="#061638"/>
+  <rect x="28" y="28" width="664" height="160" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="360" y="93" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">提言の公表</text>
+  <path d="M330 143L350 161L389 126" fill="none" stroke="#ffe300" stroke-width="6"/>
+  <rect x="28" y="218" width="664" height="160" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="360" y="283" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">改正・施行の確認</text>
+  <text x="360" y="340" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">未確認</text>
+  <rect x="28" y="408" width="664" height="160" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="360" y="473" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">各社の利用条件の確認</text>
+  <text x="360" y="530" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">未確認</text>
+
+</svg>

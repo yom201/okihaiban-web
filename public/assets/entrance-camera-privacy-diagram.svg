@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820" width="600" height="820">
+<rect width="600" height="820" rx="20" fill="#061638"/>
+<path d="M120 155L545 96V300Z" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+<path d="M420 98V298M122 318H550" stroke="#f7fbff" stroke-width="3"/>
+<rect x="292" y="196" width="108" height="83" fill="none" stroke="#ffe300" stroke-width="4" stroke-dasharray="10 6"/>
+<path d="M327 228H367V259H327Z M327 228L347 215 367 228 M347 228V259" fill="#ffe300" stroke="#061638" stroke-width="2"/>
+<rect x="54" y="130" width="54" height="96" rx="10" fill="#09245a" stroke="#f7fbff" stroke-width="4"/><circle cx="81" cy="150" r="8" fill="#ffe300"/><text x="485" y="69" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">公道</text><text x="485" y="350" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">隣家</text><text x="300" y="395" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">画像に写る範囲</text><path d="M40 432H560" stroke="#b7c6df" stroke-opacity=".4"/>
+<path d="M120 615L416 548V702Z" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+<rect x="285" y="575" width="110" height="105" fill="none" stroke="#ffe300" stroke-width="4" stroke-dasharray="10 6"/>
+<path d="M321 610H363V651H321Z M321 610L342 596 363 610 M342 610V651" fill="#ffe300" stroke="#061638" stroke-width="2"/>
+<rect x="54" y="580" width="54" height="96" rx="10" fill="#09245a" stroke="#f7fbff" stroke-width="4"/><circle cx="81" cy="600" r="8" fill="#ffe300"/><text x="300" y="493" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">自分の玄関前</text><text x="340" y="744" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">足元</text><text x="300" y="793" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">検知する範囲</text>
+</svg>

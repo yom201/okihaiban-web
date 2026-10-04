@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+<rect width="720" height="620" rx="20" fill="#061638"/>
+<g fill="#09245a" stroke="#f7fbff" stroke-width="3">
+<rect x="230" y="20" width="260" height="78" rx="16"/>
+<rect x="105" y="155" width="575" height="108" rx="14"/>
+<rect x="105" y="310" width="575" height="108" rx="14"/>
+<rect x="105" y="465" width="575" height="108" rx="14"/>
+</g>
+<g fill="none" stroke="#ffe300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M360 98V125H55V519 M55 209H90 M76 197L90 209 76 221 M55 364H90 M76 352L90 364 76 376 M55 519H90 M76 507L90 519 76 531"/>
+<path d="M140 238V178H176V238 M165 210H169"/>
+<rect x="132" y="335" width="62" height="58" rx="3"/><path d="M163 335V393 M132 364H194 M151 345H155 M174 374H178"/>
+<path d="M130 510L163 484 196 510 M140 506V548H185V506 M157 548V523H169V548"/>
+</g>
+<g font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="32" font-weight="700" fill="#f7fbff" text-anchor="middle"><text x="360" y="70">不安</text><text x="423" y="220">玄関前</text><text x="423" y="375">建物の宅配ボックス</text><text x="423" y="530">自宅以外の受取場所</text></g>
+</svg>

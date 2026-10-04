@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://okihaiban.com/package-theft-response</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/package-theft-response-og.jpg</image:loc></image:image>
   </url>
   <url>
@@ -57,5 +57,65 @@
     <loc>https://okihaiban.com/motion-sensor-through-glass</loc>
     <lastmod>2026-10-04</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/indoor-window-monitoring.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/delivered-but-not-received</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/delivered-but-not-received-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/okihai-theft-compensation</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/overview.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/expensive-package-day</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/expensive-package-day-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/visible-deterrence</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/visible-deterrence-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/parcel-box-full-or-oversized</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/parcel-box-full-or-oversized-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/okihai-standard-service</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/okihai-standard-service-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/entrance-camera-privacy</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/entrance-camera-privacy-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/apartment-okihai-rules</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/apartment-okihai-rules-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/living-alone-okihai</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/living-alone-okihai-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/shipping-label-privacy</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/shipping-label-privacy-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/okihai-rain-damage</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/okihai-rain-damage-diagram.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/unwanted-okihai-setting</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/unwanted-okihai-setting-diagram.svg</image:loc></image:image>
   </url>
 </urlset>

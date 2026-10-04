@@ -143,3 +143,70 @@
     padding: 12px 8px;
   }
 }
+
+@media (max-width: 720px) {
+  .glass-comparison.stack-table {
+    display: block;
+    background: transparent;
+  }
+
+  .glass-comparison.stack-table colgroup {
+    display: none;
+  }
+
+  .glass-comparison.stack-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .glass-comparison.stack-table tbody {
+    display: block;
+  }
+
+  .glass-comparison.stack-table tbody tr {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #c6d1e3;
+    border-radius: 18px;
+    background: #ffffff;
+  }
+
+  .glass-comparison.stack-table tbody tr + tr {
+    margin-top: 24px;
+  }
+
+  .glass-comparison.stack-table tbody th,
+  .glass-comparison.stack-table tbody td {
+    display: block;
+    width: auto;
+    border: 0;
+    padding: 18px 16px;
+  }
+
+  .glass-comparison.stack-table tbody th {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .glass-comparison.stack-table tbody td {
+    border-top: 1px solid #c6d1e3;
+  }
+
+  .glass-comparison.stack-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 8px;
+    color: #092d6b;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+}

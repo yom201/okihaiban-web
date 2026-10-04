@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" width="600" height="760">
+<rect width="600" height="760" rx="20" fill="#061638"/>
+<text x="300" y="64" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">周囲に見えること</text><rect x="54" y="102" width="54" height="96" rx="10" fill="#09245a" stroke="#f7fbff" stroke-width="4"/><circle cx="81" cy="122" r="8" fill="#ffe300"/><path d="M122 127L170 100 M133 149H185 M122 171L170 198" stroke="#ffe300" stroke-width="5" stroke-linecap="round"/>
+<path d="M328 165Q410 77 492 165Q410 253 328 165Z" fill="none" stroke="#f7fbff" stroke-width="4"/><circle cx="410" cy="165" r="25" fill="#ffe300"/>
+<path d="M40 245H560 M40 495H560" stroke="#b7c6df" stroke-opacity=".4"/>
+<text x="300" y="296" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">記録が残ること</text><rect x="136" y="327" width="150" height="123" rx="10" fill="#09245a" stroke="#f7fbff" stroke-width="4"/><path d="M151 430L190 382 219 410 242 389 271 430" fill="none" stroke="#ffe300" stroke-width="4"/>
+<rect x="326" y="327" width="138" height="123" rx="10" fill="#09245a" stroke="#f7fbff" stroke-width="4"/><path d="M380 360L418 389 380 418Z" fill="#ffe300"/>
+<text x="300" y="548" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">盗難を物理的に防ぐこと</text><path d="M246 581L300 562 354 581V626Q350 659 300 678Q250 659 246 626Z" fill="none" stroke="#b7c6df" stroke-width="4" stroke-dasharray="9 7"/>
+<path d="M268 595L332 649 M332 595L268 649" stroke="#ffe300" stroke-width="5"/>
+<text x="300" y="729" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">保証できません</text>
+</svg>

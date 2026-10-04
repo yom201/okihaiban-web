@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+  <rect width="720" height="620" rx="20" fill="#061638"/>
+  <rect x="28" y="24" width="664" height="112" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="360" y="92" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">家で待てる</text>
+  <circle cx="610" cy="56" r="10" fill="#f7fbff"/><path d="M590 114V88Q610 72 630 88V114M602 113V132M618 113V132" fill="none" stroke="#f7fbff" stroke-width="4"/>
+  <rect x="28" y="158" width="664" height="112" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="195" y="226" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">取りに行ける</text>
+  <text x="520" y="226" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">営業所・コンビニ</text>
+  <path d="M345 212H373L361 201M373 212L361 223" fill="none" stroke="#ffe300" stroke-width="4"/>
+  <rect x="28" y="292" width="664" height="112" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <text x="195" y="360" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">自宅で非対面</text>
+  <text x="520" y="360" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">宅配ボックス</text>
+  <path d="M345 346H373L361 335M373 346L361 357" fill="none" stroke="#ffe300" stroke-width="4"/>
+  <path d="M80 425V455H640V425M360 455V487" fill="none" stroke="#ffe300" stroke-width="4"/>
+  <rect x="145" y="494" width="430" height="94" rx="14" fill="#09245a" stroke="#ffe300" stroke-width="3"/>
+  <text x="360" y="552" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">日時指定</text>
+
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+<rect width="720" height="620" rx="20" fill="#061638"/>
+<g fill="#09245a" stroke="#f7fbff" stroke-width="3">
+<rect x="25" y="38" width="325" height="545" rx="16"/>
+<rect x="370" y="38" width="325" height="545" rx="16"/>
+</g>
+<g fill="none" stroke="#f7fbff" stroke-width="5" stroke-linejoin="round">
+<rect x="90" y="245" width="190" height="245" rx="9"/>
+<path d="M115 296H255 M115 334H220 M115 372H245"/>
+<rect x="438" y="245" width="190" height="245" rx="9"/>
+<path d="M463 296H603 M463 334H568 M463 372H593"/>
+</g>
+<g fill="none" stroke="#ffe300" stroke-width="6" stroke-linecap="round"><path d="M115 430H255 M463 430H603"/></g>
+<g font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="32" font-weight="700" fill="#f7fbff" text-anchor="middle"><text x="187" y="126">通販の</text><text x="187" y="179">注文ごとの指定</text><text x="533" y="126">配送会社に</text><text x="533" y="179">保存した設定</text></g>
+</svg>

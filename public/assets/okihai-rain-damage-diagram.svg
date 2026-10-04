@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+<rect width="720" height="620" rx="20" fill="#061638"/>
+<g fill="none" stroke="#f7fbff" stroke-width="4" stroke-linejoin="round">
+<path d="M245 115H660L620 150H245 M290 150V455 M660 150V455 M285 455H670"/>
+<rect x="535" y="185" width="88" height="270" rx="3"/><path d="M550 320H560"/>
+<rect x="340" y="360" width="130" height="95" rx="3"/><path d="M340 360L375 332H500L470 360 M470 360L500 332V425L470 455 M375 332V350"/>
+<path d="M515 475H665 M650 462L665 475 650 488"/>
+</g>
+<g fill="none" stroke="#ffe300" stroke-width="5" stroke-linecap="round">
+<path d="M70 245L112 277 M110 237L152 269 M152 248L194 280 M185 282L245 325 M226 305L245 325 218 320"/>
+<path d="M55 460Q110 440 165 460T275 460 M65 481Q120 461 175 481T285 481"/>
+</g>
+<g font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="32" font-weight="700" fill="#f7fbff" text-anchor="middle"><text x="425" y="75">ひさし</text><text x="148" y="205">吹き込み</text><text x="175" y="550">地面の水</text><text x="540" y="550">通行スペース</text></g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720">
+<rect width="600" height="720" rx="20" fill="#061638"/>
+<text x="300" y="57" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">氏名・住所</text><path d="M133 126L300 85 467 126V280L300 322 133 280Z M133 126L300 171 467 126 M300 171V322" fill="#09245a" stroke="#f7fbff" stroke-width="4"/>
+<path d="M203 111L303 87 382 109 282 135Z" fill="#f7fbff"/>
+<path d="M222 111L295 95 M251 118L323 101" stroke="#09245a" stroke-width="5"/>
+<path d="M40 353H560" stroke="#b7c6df" stroke-opacity=".4"/>
+<text x="300" y="402" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">回収後</text><text x="130" y="463" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">伝票</text><text x="442" y="463" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">確認</text><rect x="69" y="487" width="123" height="135" rx="4" fill="#f7fbff"/>
+<path d="M90 516H170 M90 543H170 M90 570H143" stroke="#09245a" stroke-width="5"/>
+<path d="M220 550H337 M322 536L339 550 322 564" fill="none" stroke="#ffe300" stroke-width="5"/>
+<rect x="388" y="489" width="22" height="112" transform="rotate(-15 399 545)" fill="#f7fbff"/>
+<rect x="428" y="505" width="22" height="112" transform="rotate(12 439 561)" fill="#f7fbff"/>
+<rect x="476" y="489" width="22" height="112" transform="rotate(-6 487 545)" fill="#f7fbff"/>
+<text x="443" y="665" fill="#f7fbff" text-anchor="middle" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700">処分</text>
+</svg>

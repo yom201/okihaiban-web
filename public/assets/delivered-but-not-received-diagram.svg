@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+  <rect width="720" height="620" rx="20" fill="#061638"/>
+  <rect x="34" y="28" width="652" height="124" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <rect x="64" y="51" width="66" height="76" rx="6" fill="none" stroke="#f7fbff" stroke-width="4"/><path d="M76 69H118M76 84H118M76 99H104" stroke="#ffe300" stroke-width="4"/>
+  <text x="412" y="103" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">通知・配達写真</text>
+  <rect x="34" y="182" width="652" height="124" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <rect x="60" y="217" width="75" height="53" rx="8" fill="none" stroke="#f7fbff" stroke-width="4"/><circle cx="98" cy="244" r="15" fill="none" stroke="#ffe300" stroke-width="4"/>
+  <text x="412" y="257" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">玄関前の記録</text>
+  <rect x="34" y="336" width="652" height="124" rx="14" fill="#09245a" stroke="#f7fbff" stroke-width="3"/>
+  <path d="M61 436V357H130V436M117 392H120M54 436H139" fill="none" stroke="#f7fbff" stroke-width="4"/>
+  <text x="412" y="411" fill="#f7fbff" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">実際の指定場所</text>
+  <text x="360" y="524" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">写っていないことは</text>
+  <text x="360" y="573" fill="#ffe300" font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">不在の証明にならない</text>
+
+</svg>
