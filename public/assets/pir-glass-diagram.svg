@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" width="720" height="620">
+  <defs>
+    <linearGradient id="heat" x1="0" x2="1">
+      <stop stop-color="#ff4b3f"/>
+      <stop offset="1" stop-color="#f4b332"/>
+    </linearGradient>
+    <marker id="heat-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 6 3 0 6" fill="none" stroke="#f4b332" stroke-width="2"/>
+    </marker>
+    <marker id="light-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 6 3 0 6" fill="none" stroke="#ffe300" stroke-width="2"/>
+    </marker>
+    <g id="person" fill="#f7fbff">
+      <circle cx="100" cy="135" r="22"/>
+      <path d="M78 165 Q100 150 122 165 L140 225 Q140 235 129 234 L116 195 116 239 129 277 Q130 289 117 289 L101 250 84 289 Q70 291 72 278 L85 239 85 195 70 232 Q57 238 59 223Z"/>
+    </g>
+    <g id="window">
+      <rect x="350" y="104" width="38" height="186" rx="4" fill="#09245a" stroke="#b7c6df" stroke-width="4"/>
+      <path d="M358 115V279 M380 115V279 M360 143L378 125 M360 172L378 154" stroke="#b7c6df" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="720" height="620" rx="20" fill="#061638"/>
+  <path d="M400 90H692V298H400Z M400 400H692V608H400Z" fill="#09245a"/>
+  <path d="M28 310H692" stroke="#b7c6df" stroke-opacity=".35"/>
+  <g font-family="Hiragino Sans, Yu Gothic, system-ui, sans-serif" font-size="28" font-weight="700" fill="#f7fbff" text-anchor="middle">
+    <text x="360" y="46">遠赤外線（熱）はガラスで止まる</text>
+    <text x="360" y="84">人感センサーに届かない</text>
+    <text x="360" y="356" fill="#ffe300">目に見える光はガラスを通る</text>
+    <text x="360" y="394">スマホのカメラに届く</text>
+  </g>
+  <use href="#person"/>
+  <use href="#window"/>
+  <path d="M146 198 Q160 173 174 198 T202 198 T230 198 T258 198 T286 198 L310 198" fill="none" stroke="url(#heat)" stroke-width="6" marker-end="url(#heat-arrow)"/>
+  <path d="M321 180L341 216 M341 180L321 216" stroke="#ff4b3f" stroke-width="6" stroke-linecap="round"/>
+  <rect x="522" y="162" width="112" height="91" rx="10" fill="#f7fbff"/>
+  <path d="M548 217A30 30 0 0 1 608 217Z" fill="#b7c6df" stroke="#061638" stroke-width="3"/>
+  <circle cx="577" cy="179" r="4" fill="#061638"/>
+  <g transform="translate(0 310)">
+    <use href="#person"/>
+    <use href="#window"/>
+    <path d="M146 198H550" fill="none" stroke="#ffe300" stroke-width="6" marker-end="url(#light-arrow)"/>
+    <rect x="557" y="115" width="74" height="169" rx="13" fill="#b7c6df" stroke="#f7fbff" stroke-width="4"/>
+    <rect x="565" y="123" width="58" height="153" rx="8" fill="#061638"/>
+    <rect x="573" y="132" width="32" height="39" rx="9" fill="#09245a"/>
+    <circle cx="588" cy="145" r="8" fill="#b7c6df"/>
+    <circle cx="588" cy="145" r="4" fill="#061638"/>
+    <circle cx="588" cy="162" r="4" fill="#f4b332"/>
+  </g>
+</svg>

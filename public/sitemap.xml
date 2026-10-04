@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://okihaiban.com/usecase-theft-record</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/usecase-theft-record.jpg</image:loc></image:image>
   </url>
   <url>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://okihaiban.com/phone-safety</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <image:image><image:loc>https://okihaiban.com/assets/phone-safety-og.jpg</image:loc></image:image>
   </url>
   <url>
@@ -52,5 +52,10 @@
   <url>
     <loc>https://okihaiban.com/terms-of-use</loc>
     <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://okihaiban.com/motion-sensor-through-glass</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image><image:loc>https://okihaiban.com/assets/indoor-window-monitoring.jpg</image:loc></image:image>
   </url>
 </urlset>

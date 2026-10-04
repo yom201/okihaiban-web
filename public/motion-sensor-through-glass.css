@@ -1,0 +1,145 @@
+.glass-page .phone-safety-hero {
+  min-height: auto;
+}
+
+.glass-page .phone-safety-hero-inner {
+  display: block;
+  max-width: 940px;
+}
+
+.glass-page .phone-safety-hero h1 {
+  max-width: 940px;
+  line-height: 1.2;
+  word-break: normal;
+}
+
+.glass-page .phone-safety-lead {
+  max-width: 900px;
+}
+
+.glass-copy {
+  max-width: 940px;
+  color: #45546d;
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+  font-weight: 710;
+}
+
+.glass-copy h2 {
+  color: #092d6b;
+  word-break: normal;
+  line-height: 1.35;
+}
+
+.glass-copy p,
+.glass-copy ul,
+.glass-copy ol {
+  margin: 24px 0 0;
+}
+
+.glass-copy ul,
+.glass-copy ol {
+  padding-left: 1.5em;
+}
+
+.glass-copy li + li {
+  margin-top: 14px;
+}
+
+.glass-copy a {
+  color: #0d47a1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.glass-copy a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 5px;
+}
+
+.glass-diagram,
+.glass-photo {
+  max-width: 720px;
+  margin: 32px auto;
+  overflow: hidden;
+  border: 1px solid rgba(9, 31, 77, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgba(8, 25, 61, 0.16);
+}
+
+.glass-diagram img {
+  width: 100%;
+  height: auto;
+}
+
+.glass-sources {
+  font-size: 1rem;
+}
+
+.glass-comparison {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: #ffffff;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.glass-comparison .comparison-label {
+  width: 23%;
+}
+
+.glass-comparison th,
+.glass-comparison td {
+  border: 1px solid #c6d1e3;
+  padding: 18px 16px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.glass-comparison thead {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.glass-comparison thead th:last-child {
+  color: var(--yellow);
+}
+
+.glass-comparison tbody th {
+  background: #edf2fb;
+  color: #092d6b;
+}
+
+.glass-cautions strong {
+  color: #092d6b;
+}
+
+.glass-page .phone-safety-closing h2 {
+  color: #ffffff;
+}
+
+.glass-copy .glass-related {
+  padding: 0;
+  list-style: none;
+}
+
+.glass-related a {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: var(--yellow);
+}
+
+@media (max-width: 640px) {
+  .glass-page .phone-safety-hero h1 {
+    font-size: clamp(2.55rem, 10vw, 4.25rem);
+  }
+
+  .glass-comparison th,
+  .glass-comparison td {
+    padding: 12px 8px;
+  }
+}
