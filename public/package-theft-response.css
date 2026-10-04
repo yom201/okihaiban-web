@@ -650,3 +650,26 @@
     gap: 12px;
   }
 }
+
+/* Keep full-width backgrounds while aligning desktop content to 1180px. */
+@media (min-width: 1100px) {
+  .response-landing .response-hero,
+  .response-landing .scope-note,
+  .response-landing .section-band {
+    padding-inline: max(clamp(24px, 7vw, 112px), calc((100% - 1180px) / 2));
+  }
+
+  .response-landing .section-inner {
+    width: min(1180px, 100%);
+  }
+
+  .response-landing .response-hero h1 {
+    font-size: clamp(3.2rem, 4.4vw, 3.8rem);
+  }
+
+  .response-landing h2 {
+    word-break: normal;
+    line-break: strict;
+    text-wrap: balance;
+  }
+}

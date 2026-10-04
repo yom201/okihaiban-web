@@ -2096,3 +2096,71 @@ h3 {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
+
+/* Align desktop content with each landing page's body sections. */
+@media (min-width: 1100px) {
+  .problem-led-landing .hero,
+  .theft-landing .hero {
+    padding-inline: max(clamp(20px, 5vw, 68px), calc((100% - 1140px) / 2));
+  }
+
+  .problem-led-landing .hero {
+    grid-template-columns: minmax(0, 760fr) minmax(0, 560fr);
+  }
+
+  .theft-landing .hero {
+    grid-template-columns: minmax(0, 600fr) minmax(0, 620fr);
+  }
+
+  .theft-landing .hero-copy {
+    justify-self: stretch;
+  }
+
+  .problem-led-landing .hero-copy,
+  .theft-landing .hero-copy {
+    container-type: inline-size;
+  }
+
+  .problem-led-landing .hero h1 {
+    font-size: min(4.6rem, 10.8cqw);
+  }
+
+  .problem-led-landing .hero-title-line {
+    white-space: nowrap;
+  }
+
+  .theft-landing .hero h1 {
+    font-size: min(5.9rem, 9.7cqw);
+  }
+
+  .theft-landing .hero h1 > span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  /* h1::first-line does not reach inline-block spans; keep the first phrase yellow. */
+  .theft-landing .hero h1 > span:first-child {
+    color: var(--yellow);
+  }
+
+  .theft-landing .hero-copy > .eyebrow {
+    font-size: min(1.38rem, 3.8cqw);
+    white-space: nowrap;
+  }
+
+  .theft-landing .hero-threat {
+    margin-inline: 0;
+  }
+
+  .theft-landing .site-header {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+
+  .theft-landing h2 {
+    word-break: normal;
+    line-break: strict;
+    text-wrap: balance;
+  }
+}
