@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 CANONICAL_ORIGIN = "https://okihaiban.com"
 PAGES_ORIGIN = "https://okihaiban-web.pages.dev"
+# iOS 版を App Store で公開したら True にする。True にすると画質ページの iPhone の注記が必須に戻る
+IOS_APP_RELEASED = False
 REQUIRED_ALIASES = {
     "/bannosuke": "/",
     "/bannosuke.html": "/",
@@ -215,6 +217,9 @@ def source_audit() -> tuple[list[str], list[str]]:
     urls = [loc for loc, _ in entries]
     if not urls:
         errors.append("sitemap.xml has no URLs")
+        if not IOS_APP_RELEASED:
+            notes.append("IOS_UNRELEASED_PAGES_SCANNED=0")
+            errors.append("iOS app is not released; no sitemap pages were scanned")
         return errors, notes
     if len(urls) != len(set(urls)):
         errors.append("sitemap.xml contains duplicate URLs")
@@ -328,8 +333,25 @@ def source_audit() -> tuple[list[str], list[str]]:
     if any(copy in quality_source for copy in rejected_quality_copy):
         errors.append("removed image-quality copy must not return")
     ios_condition = "iPhoneはOSの制約により、監視やリモート撮影の利用には置き配番アプリを常に前面で立ち上げておく必要があります。"
-    if quality_source.count(f"<strong>{ios_condition}</strong>") != 1:
-        errors.append("image-quality page must show the exact bold iPhone condition once")
+    if IOS_APP_RELEASED:
+        if quality_source.count(f"<strong>{ios_condition}</strong>") != 1:
+            errors.append("image-quality page must show the exact bold iPhone condition once")
+    else:
+        scanned = 0
+        for route in incoming:
+            if route in ("/privacy-policy", "/terms-of-use"):
+                continue
+            path = route_file(route)
+            if not path.exists():
+                continue  # Missing sitemap HTML is already an error above.
+            source = path.read_text(encoding="utf-8")
+            scanned += 1
+            match = re.search(r"iPhone|iPad|App Store|\biOS\b", source)
+            if match:
+                errors.append(f"iOS app is not released; {route} must not mention it: {match.group(0)}")
+        notes.append(f"IOS_UNRELEASED_PAGES_SCANNED={scanned}")
+        if scanned == 0:
+            errors.append("iOS app is not released; no sitemap pages were scanned")
     quality_main = quality_source.partition("<main>")[2].partition("</main>")[0]
     required_search_phrases = (
         "ネットワークカメラ",
