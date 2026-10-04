@@ -2164,3 +2164,11 @@ h3 {
     text-wrap: balance;
   }
 }
+
+/* Legal pages: start the hero title at the same left edge as the article text
+   inside the card (card 1040px wide with 72px padding) on desktop widths. */
+@media (min-width: 1100px) {
+  .legal-hero-inner {
+    width: min(896px, 100%);
+  }
+}
