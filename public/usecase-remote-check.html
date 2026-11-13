@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>スマホで置き配を見守る方法｜外出先から玄関前を確認 | 置き配番</title>
+    <title>外出先から玄関前の置き配を確認する方法｜置き配番</title>
     <meta
       name="description"
-      content="余ったスマホを玄関前に向けて置き配を見守る手順を紹介。設置の位置、監視の始め方、Gmail に届く画像、外出先のブラウザから今の写真を撮る方法、撮れないときの原因をまとめました。"
+      content="外出先からブラウザで玄関前の写真をリクエストし、置き配の様子をGmailで確認する方法。必要な設定、届く記録、リモート撮影ができないときの確認項目を紹介します。"
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://okihaiban.com/usecase-remote-check" />
     <meta property="og:site_name" content="置き配番" />
-    <meta property="og:title" content="スマホで置き配を見守る方法｜外出先から玄関前を確認 | 置き配番" />
-    <meta property="og:description" content="余ったスマホを玄関前に向けて置き配を見守る手順を紹介。設置の位置、監視の始め方、Gmail に届く画像、外出先のブラウザから今の写真を撮る方法、撮れないときの原因をまとめました。" />
+    <meta property="og:title" content="外出先から玄関前の置き配を確認する方法｜置き配番" />
+    <meta property="og:description" content="外出先からブラウザで玄関前の写真をリクエストし、置き配の様子をGmailで確認する方法。必要な設定、届く記録、リモート撮影ができないときの確認項目を紹介します。" />
     <meta property="og:image" content="https://okihaiban.com/assets/usecase-remote-cafe-check.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://okihaiban.com/usecase-remote-check" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
-    <link rel="stylesheet" href="/bannosuke.css" />
+    <link rel="stylesheet" href="/bannosuke.css?v=20261113-seo-review" />
   </head>
-  <body class="usecase-detail">
+  <body class="usecase-detail remote-check-landing">
     <header class="site-header" aria-label="サイトヘッダー">
       <a class="brand" href="https://okihaiban.com/" aria-label="置き配番トップへ">
         <img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" />
@@ -36,12 +36,10 @@
       <section class="usecase-hero section-band" aria-labelledby="usecase-title">
         <div class="section-inner usecase-hero-grid">
           <div class="usecase-copy">
-            <a class="back-link" href="https://okihaiban.com/#problems">こんな時に戻る</a>
-            <p class="section-kicker">USE CASE 01</p>
-            <h1 id="usecase-title">外出先でも、玄関前の様子を見返せる。</h1>
+            <h1 id="usecase-title">外出先から<wbr />置き配を確認</h1>
             <p>
-              注文した商品が今日届く。でも家にはいない。そんな時に、余ったスマホを玄関前へ向けておけば、
-              置き配エリアに人が出入りした前後を画像と動画であとから確認しやすくします。
+              出先で玄関前が気になったら、ブラウザから撮影を依頼できます。
+              自宅に置いたスマホが撮影できる状態なら、写真が Gmail に届きます。
             </p>
           </div>
           <figure class="usecase-visual">
@@ -64,7 +62,7 @@
             </article>
             <article>
               <span>02</span>
-              <h3>通知からすぐ確認</h3>
+              <h3>検知時の通知をメールで確認</h3>
               <p>Gmail通知を設定しておけば、動きがあったことに気づきやすく、確認のきっかけを作れます。</p>
             </article>
             <article>
@@ -104,7 +102,7 @@
           <ul class="guide-list">
             <li>使っていない Android スマホ 1 台。玄関前に置いたままにします。</li>
             <li>Google アカウント。記録のバックアップ先（Google Drive）と、通知の送り先（Gmail）に使います。</li>
-            <li>置き配番の月額プラン。初めての方は 1 週間の無料体験から始められます。</li>
+            <li>置き配番の月額プラン。無料体験の対象かどうかは、Google Playの購入画面で確認できます。</li>
             <li>電源。長い時間見守るときは、充電しながら使ってください。</li>
           </ul>
           <p>外出先で見るための専用アプリは要りません。ふだんのスマホの Gmail とブラウザで確認します。</p>
@@ -129,12 +127,12 @@
               <strong>検知方式を選んで、監視を開始する</strong>
               <ul class="guide-list">
                 <li>侵入検知: 監視エリアの動きを検知して記録します。</li>
-                <li>状態変化検知: 人が通っただけでは知らせず、荷物が置かれた・なくなったなど、景色の変化が残ったときに知らせます。人通りの多い玄関に向いています。</li>
+                <li>状態変化検知では、動きが落ち着いた後の景色を直前の記録と比べます。荷物を置く場所で、使う前に変化を拾えるか試してください。</li>
               </ul>
             </li>
             <li>
               <strong>外出先で確認する</strong>
-              <p>動きや変化があると Gmail に通知が届きます。今の様子を見たいときは、ブラウザで <a href="/remote">okihaiban.com/remote</a> を開いて撮影を依頼すると、写真が Gmail に届きます。</p>
+              <p>検知時の通知は Gmail で確認できます。今の様子を見たいときは、ブラウザで <a href="/remote">撮影依頼ページ</a>を開きます。撮影できた写真は Gmail に届きます。</p>
             </li>
           </ol>
         </div>
@@ -146,7 +144,7 @@
             <h2 id="records-title">何が届き、何が残るか</h2>
           </div>
           <ul class="guide-list">
-            <li>侵入検知では、動きの直前・動きが入った時・少し後の画像と、前後の動画を記録します。</li>
+            <li>侵入検知では、動きの直前・検知時・少し後の画像を記録します。動画の記録を有効にすると、前後の動画も見返せます。</li>
             <li>状態変化検知では、変化する前の画像と変化した後の画像を残します。動きを伴う場合は動画も記録します。</li>
             <li>記録はスマホ本体に保存され、Google Drive と連携していれば自分の Drive にもバックアップされます。</li>
             <li>リモート撮影の写真は、Gmail の添付画像として届きます。</li>
@@ -155,10 +153,10 @@
         </div>
       </section>
 
-      <section class="section-band usecase-point-band guide-band" aria-labelledby="remote-help-title">
+      <section id="remote-requirements" class="section-band usecase-point-band guide-band" aria-labelledby="remote-help-title">
         <div class="section-inner">
           <div class="section-heading">
-            <h2 id="remote-help-title">リモート撮影ができないとき</h2>
+            <h2 id="remote-help-title">リモート撮影の利用条件</h2>
           </div>
           <p>リモート撮影は、次の 3 つがそろうと自動で受け付けます。</p>
           <ul class="guide-list">
@@ -166,7 +164,7 @@
             <li>「検知時の Gmail 通知」がオンになっている</li>
             <li>月額プランに加入している（無料体験中を含む）</li>
           </ul>
-          <p>置き配番アプリを一度開いてあれば、監視を止めていても、画面が消えていても撮影できます。</p>
+          <p>置き配番アプリが撮影を受け付けられる状態であることと、監視用スマホが通信できることを確認してください。外出前に撮影を依頼し、写真を受け取れるか試しておくと確認できます。</p>
           <p>同じ Google アカウントで複数のスマホに置き配番を入れている場合、撮影を受け付けるのは 1 台だけです。</p>
         </div>
       </section>

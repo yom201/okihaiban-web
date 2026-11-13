@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>置き配を見守り、玄関前を記録するスマホアプリ | 置き配番</title>
+    <title>置き配の監視をスマホで｜玄関前を記録する置き配番</title>
     <meta
       name="description"
-      content="置き配が届く日や非対面で受け取る日に、余ったスマホで玄関前の動きを前後の画像と動画に記録。必要な時はリモート撮影を依頼し、撮影できた画像をGmailで確認できます。"
+      content="余ったAndroidスマホで玄関前の置き配を監視。指定した範囲の動きを検知し、前後の写真や動画を記録します。設置手順、専用カメラや宅配ボックスとの違い、月額料金を確認できます。"
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://okihaiban.com/" />
     <meta property="og:site_name" content="置き配番" />
-    <meta property="og:title" content="置き配を見守り、玄関前を記録する | 置き配番" />
+    <meta property="og:title" content="置き配の監視をスマホで｜玄関前を記録する置き配番" />
     <meta
       property="og:description"
-      content="置き配や非対面の受け取りに。余ったスマホで玄関前の動きを記録し、自分で状況を確認できます。"
+      content="余ったAndroidスマホで置き配を監視。玄関前の指定範囲で動きを検知し、前後の写真や動画を見返せます。"
     />
     <meta property="og:image" content="https://okihaiban.com/assets/hero.png" />
     <meta property="og:image:width" content="1448" />
@@ -25,8 +25,8 @@
     <meta name="twitter:image" content="https://okihaiban.com/assets/hero.png" />
     <link rel="canonical" href="https://okihaiban.com/" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
-    <link rel="preload" href="/assets/hero.png" as="image" />
-    <link rel="stylesheet" href="/bannosuke.css?v=20261004-layout" />
+    <link rel="preload" href="/assets/hero.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="/bannosuke.css?v=20261113-seo-review" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -45,55 +45,73 @@
         <img class="brand-logo" src="/assets/logo_navy_transparent.png" alt="置き配番" />
       </a>
       <nav class="nav-links" aria-label="主要ナビゲーション">
-        <a href="#problems">こんな時に</a>
+        <a href="#setup">設置手順</a>
+        <a href="#how">記録のしくみ</a>
+        <a href="#camera">カメラの選び方</a>
         <a href="/network-camera-image-quality">室内の高画質撮影</a>
-        <a href="#how">機能</a>
-        <a href="#camera">スマホを活用</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">家を離れていても、置き配の様子を確かめたい人へ</p>
-          <p class="hero-context">置き配・非対面の受け取り・玄関前の見守り</p>
           <h1 id="hero-title">
-            <span class="hero-title-line">置き配・留守中の</span>
-            <span class="hero-title-line">不安を、外出先から</span>
-            <span class="hero-title-line">確かめる。</span>
+            <span class="hero-title-line">余ったスマホで</span>
+            <span class="hero-title-line">置き配を監視</span>
           </h1>
           <p class="hero-description">
-            置き配は無事？ 配達スタッフはもう離れた？ 外出中、玄関前はどうなっている？
-            <strong>余ったスマホを置けば、動きの前後を記録して自分で確認できます。</strong>
+            置き配番（おきはいばん）は、余ったAndroidスマホで玄関前の置き配を見守るアプリです。
+            指定した範囲で動きを検知すると、その前後を写真や動画で見返せます。
           </p>
-          <ul class="hero-question-list" aria-label="置き配番が応える3つの不安">
-            <li>「置き配が盗まれないか心配」</li>
-            <li>「フードデリバリーのスタッフがいなくなって受け取りたい」</li>
-            <li>「外出中、玄関前の荷物が気になる」</li>
-          </ul>
           <div class="hero-actions">
-            <a class="button primary" href="#problems">できることを見る</a>
-            <a class="button secondary" href="#how">記録の流れを見る</a>
+            <a class="button primary" href="#setup">設置手順を見る</a>
+            <a class="button secondary" href="#camera">監視方法を比べる</a>
           </div>
-          <a class="play-store-entry" href="https://play.google.com/store/apps/details?id=com.okihaiban.okihaibanApp" aria-label="Google Playで置き配番のページを開く">
-            <img src="/assets/google-play-qr.png" width="456" height="456" alt="Google Playの置き配番ページへ進むQRコード" />
+          <a class="play-store-entry" href="https://play.google.com/store/apps/details?id=com.okihaiban.okihaibanApp">
+            <img src="/assets/google-play-qr.png" width="456" height="456" alt="" />
             <span class="play-store-entry-copy">
-              <strong>Android版、Google Playで公開中</strong>
-              <span>QRコードを読み取るか、ここをタップしてストアへ</span>
+              <strong>Google Play</strong>
+              <span>Android 10以上<br />日本では月額390円（税込）<br />自動更新</span>
             </span>
           </a>
           <p class="trademark-status">「置き配番」は商標登録出願中です。</p>
-          <p class="hero-description">置き配番（おきはいばん / Okihaiban）は、余ったスマホを玄関前に向けて、置き配の前後を画像と動画で記録するアプリです。</p>
         </div>
         <figure class="hero-character hero-bannosuke">
           <img
-            src="/assets/hero.png"
+            src="/assets/hero.webp"
             width="1448"
             height="1086"
             fetchpriority="high"
             alt="使っていなかったスマホを玄関に設置し、動体検知・自動録画・Gmail通知に活用するイメージ"
           />
         </figure>
+      </section>
+
+      <section id="setup" class="section-band setup-band" aria-labelledby="setup-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <h2 id="setup-title">スマホで置き配を<wbr />監視する手順</h2>
+          </div>
+          <ol class="setup-steps">
+            <li>
+              <strong>荷物を置く場所にカメラを向ける</strong>
+              <p>置き配番を入れたスマホを、通行の妨げにならず、隣家や共用廊下が映り込みにくい位置に固定します。監視に使う時間に合わせて電源も確保します。</p>
+            </li>
+            <li>
+              <strong>アプリで監視エリアを指定する</strong>
+              <p>アプリの監視画面でカメラを許可し、「監視エリア設定」を開きます。プレビューで荷物が置かれる範囲に枠を合わせ、保存します。</p>
+            </li>
+            <li>
+              <strong>画像や動画が残るか試す</strong>
+              <p>「監視を開始」を押し、置き配の場所に試しに荷物を置いて、履歴に記録が残るか確認します。暗くなる時間帯に使う場合は、その明るさでも試してください。</p>
+            </li>
+          </ol>
+          <div class="setup-guides">
+            <a href="/smartphone-mounts">スマホの固定方法</a>
+            <a href="/phone-safety">端末を安全に設置する方法</a>
+            <a href="/entrance-camera-privacy">共用廊下や隣家が映るときの注意</a>
+          </div>
+        </div>
       </section>
 
       <section id="problems" class="section-band problem-band" aria-labelledby="problems-title">
@@ -108,21 +126,21 @@
           </div>
           <div class="problem-grid">
             <article class="problem-card">
-              <img src="/assets/usecase-theft-record.jpg" alt="玄関前に置かれた荷物の近くを人が通る様子" />
+              <img src="/assets/usecase-theft-record.jpg" loading="lazy" alt="玄関前に置かれた荷物の近くを人が通る様子" />
               <div class="problem-card-copy">
                 <p class="problem-number">WORRY 01</p>
                 <h3>「置き配が盗まれないか心配」</h3>
                 <p>
-                  荷物が届く予定の時だけ玄関前を見守り、指定した範囲に動きが入る前・入った時・その後の画像と動画を記録。
+                  荷物が届く予定の時だけ玄関前を見守り、指定した範囲で動きを検知した前後の画像や動画を記録。
                   万一の時に、何が起きたかを自分で確認する材料を残します。
                 </p>
-                <a href="/usecase-theft-record">置き配の記録を詳しく見る</a>
+                <a href="/usecase-theft-record">置き配の盗難対策を見る</a>
                 <p>すでに荷物が見当たらない場合は、配送業者への確認から警察への届出までの順番をまとめています。</p>
                 <a href="/package-theft-response">置き配の荷物がないときの対応手順を見る</a>
               </div>
             </article>
             <article class="problem-card">
-              <img src="/assets/usecase-contactless-pickup.jpg" alt="玄関前にフードデリバリーの商品を置く配達スタッフ" />
+              <img src="/assets/usecase-contactless-pickup.jpg" loading="lazy" alt="玄関前にフードデリバリーの商品を置く配達スタッフ" />
               <div class="problem-card-copy">
                 <p class="problem-number">WORRY 02</p>
                 <h3>「フードデリバリーのスタッフがいなくなって受け取りたい」</h3>
@@ -134,7 +152,7 @@
               </div>
             </article>
             <article class="problem-card">
-              <img src="/assets/usecase-remote-cafe-check.jpg" alt="外出先で自宅の様子をスマートフォンから確認する女性" />
+              <img src="/assets/usecase-remote-cafe-check.jpg" loading="lazy" alt="外出先で自宅の様子をスマートフォンから確認する女性" />
               <div class="problem-card-copy">
                 <p class="problem-number">WORRY 03</p>
                 <h3>「外出中、玄関前の荷物が気になる」</h3>
@@ -152,49 +170,14 @@
         </div>
       </section>
 
-      <section class="section-band feature-intro-band" aria-labelledby="feature-intro-title">
-        <div class="section-inner feature-intro">
-          <div>
-            <p class="section-kicker">THE SOLUTION</p>
-            <h2 id="feature-intro-title">余ったスマホが、必要な時だけ家を見る目になる。</h2>
-            <p>
-              新しい専用カメラを買わずに、ご家庭のスマホを活用。
-              荷物が届く予定の日など、必要な時間だけ玄関前の動きを記録できます。
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="how" class="section-band how-band" aria-labelledby="how-title">
         <div class="section-inner">
           <div class="section-heading">
             <p class="section-kicker">FEATURES</p>
-            <h2 id="how-title">ここから、置き配番の機能です。</h2>
+            <h2 id="how-title">置き配の前後を記録するしくみ</h2>
             <p class="section-lead">
-              玄関前の動きを前後で残す見守りと、好きな時に1枚の撮影を依頼するリモート撮影。目的に合わせて使い分けられます。
+              侵入検知モードでは、監視エリア内の動きをきっかけに記録します。外出先から今の様子を確かめたいときは、リモート撮影で写真を1枚リクエストできます。
             </p>
-          </div>
-          <div class="feature-visuals" aria-label="置き配番の機能説明画像">
-            <figure class="feature-main-visual">
-              <img
-                src="/assets/feature-main.png"
-                width="1414"
-                height="2000"
-                loading="lazy"
-                decoding="async"
-                alt="置き配番の主な機能と記録・通知・保存の流れを説明する画像"
-              />
-            </figure>
-            <figure class="feature-overview-visual">
-              <img
-                src="/assets/overview.png"
-                width="1254"
-                height="1254"
-                loading="lazy"
-                decoding="async"
-                alt="置き配番とアプリ利用者、Gmail、Google Driveのつながりを示す全体図"
-              />
-            </figure>
           </div>
           <div class="record-grid">
             <article>
@@ -215,13 +198,13 @@
             <article>
               <span>4</span>
               <h3>前後の動画</h3>
-              <p>画像だけでは分からない一連の経緯を、短い動画で確認できる形にします。</p>
+              <p>動画の記録を有効にすると、画像だけでは分かりにくい動きの流れも見返せます。</p>
             </article>
           </div>
           <div class="feature-summary-grid">
-            <article><strong>リモート撮影</strong><span>外出先から、好きな時に1枚の撮影を依頼</span><a href="/network-camera-image-quality">室内の撮影イメージを見る →</a></article>
-            <article><strong>Gmail通知</strong><span>撮影画像や動きの通知をメールで確認</span></article>
-            <article><strong>Google Drive</strong><span>必要に応じて記録のバックアップを保存</span></article>
+            <article><strong>リモート撮影</strong><span>Google Drive連携・Gmail通知・月額プランを有効にすると、外出先から写真1枚の撮影を依頼できます。</span><a href="/usecase-remote-check#remote-requirements">リモート撮影の利用条件</a><a href="/network-camera-image-quality">室内の撮影イメージを見る</a></article>
+            <article><strong>Gmail通知</strong><span>Google連携と通知の設定を済ませると、検知時の通知をメールで受け取れます。通信状況によって遅れる場合があります。</span></article>
+            <article><strong>Google Drive</strong><span>記録は端末に保存されます。Google Driveと連携すれば、記録を自分のDriveにバックアップできます。</span></article>
           </div>
         </div>
       </section>
@@ -230,11 +213,11 @@
         <div class="section-inner">
           <div class="state-change-feature">
             <p class="state-change-label">選べる検知方式</p>
-            <h3 id="state-change-title">「状態変化検知」モードを追加</h3>
+            <h2 id="state-change-title">状態変化検知モード</h2>
             <div class="state-change-copy">
               <p>基本モードである「侵入検知」は、監視エリア内の動きを検知して記録します。</p>
-              <p>「状態変化検知」は、一時的な人の通過や動きだけでは通知せず、直前に記録した景色から、落ち着いた後も残る変化を検知したときにメールで知らせます。</p>
-              <p>変化前後の画像を保存し、動きを伴う場合は動画も記録します。人の通過が多く、荷物が置かれるなど監視エリアの変化を知りたい場面に向いています。</p>
+              <p>「状態変化検知」は、動きが落ち着いた後の景色を直前の記録と比べます。変化を検知したときは、Gmail通知を有効にしていればメールで知らせます。</p>
+              <p>変化前後の画像を保存します。動きがあった場合は、その動画も見返せます。利用前に、置き配場所の明るさや荷物の大きさで変化を拾えるか試してください。</p>
             </div>
             <div class="state-change-visuals" aria-label="状態変化検知の利用イメージ">
               <figure>
@@ -268,52 +251,29 @@
       <section id="camera" class="section-band camera-band" aria-labelledby="camera-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-kicker">USE YOUR SMARTPHONE</p>
-            <h2 id="camera-title">専用カメラを買う前に、余ったスマホを活かす。</h2>
+            <h2 id="camera-title">置き配の見守り方を比べる</h2>
+            <p class="section-lead">荷物が届く日の記録、玄関の常時録画、荷物の保管。重視することによって、選ぶ方法が変わります。</p>
           </div>
-          <div class="camera-grid">
+          <div class="feature-summary-grid camera-options">
             <article>
-              <div class="camera-problem">
-                <span>専用機器の場合</span>
-                <h3>本体や取付機器の購入から始まる</h3>
-                <p>玄関前や室内を少し確認したいだけでも、新しいカメラの購入と設置が必要です。</p>
-              </div>
-              <div class="okihaiban-answer">
-                <span>置き配番なら</span>
-                <h4>ご家庭のスマホから始められる</h4>
-                <p>手元に余っている Android スマホを、必要な場所へ向けて活用できます。</p>
-              </div>
+              <h3>届く日だけ記録するならスマホ</h3>
+              <p>スマホを固定して荷物を置く範囲を映せる場合に向いています。必要な時間だけ、動きをきっかけに記録します。暗い場所では事前に試してください。</p>
             </article>
             <article>
-              <div class="camera-problem">
-                <span>一般的なサービスの場合</span>
-                <h3>保存先や保存期間が決められている</h3>
-                <p>製品ごとのクラウド容量や保存期間に左右され、後から管理方法を変えにくいことがあります。</p>
-              </div>
-              <div class="okihaiban-answer">
-                <span>置き配番なら</span>
-                <h4>スマホ本体＋あなたのGoogle Drive</h4>
-                <p>端末内の記録を中心に、必要に応じて自分のGoogle Driveへバックアップできます。</p>
-              </div>
+              <h3>常時録画や夜間撮影なら専用カメラ</h3>
+              <p>必要な機能に対応した機種を選びます。屋外に設置する場合は、防水性能、夜間の画角、電源、録画の保存先も確認します。</p>
             </article>
             <article>
-              <div class="camera-problem">
-                <span>置き配の確認では</span>
-                <h3>動いた瞬間だけでは経緯が分かりにくい</h3>
-                <p>1枚だけでは、荷物が届く前だったのか、その後だったのかを判断しにくい場合があります。</p>
-              </div>
-              <div class="okihaiban-answer">
-                <span>置き配番なら</span>
-                <h4>動きの前・その時・後を並べて確認</h4>
-                <p>3枚の画像と動画を、人が状況を判断するための材料として残します。</p>
-              </div>
+              <h3>荷物に触れられにくくするなら宅配ボックス</h3>
+              <p>施錠できるボックスに収まる荷物なら、通行人の目に触れにくくなります。ボックスに入らない荷物は受け取り方法を確認します。</p>
+              <a href="/parcel-box-full-or-oversized">宅配ボックスに入らないときの受け取り方</a>
             </article>
           </div>
           <aside class="phone-safety-entry" aria-labelledby="phone-safety-entry-title">
             <div>
               <span>玄関へスマホを設置する前に</span>
               <h3 id="phone-safety-entry-title">スマホ自体の盗難にも備えてください。</h3>
-              <p>室内から窓越しに撮る方法、大切なデータを入れない方法、必要な時間だけ設置する方法をまとめています。</p>
+              <p>端末を屋外に置く前に、室内から撮れるか確かめてください。窓越しに使う場合は、反射や暗さで映り方が変わるので、設置した場所で記録を試してください。</p>
             </div>
             <div id="mounting-guides" class="phone-safety-actions" aria-label="玄関スマホの設置案内">
               <a class="button primary" href="/smartphone-mounts">玄関ドアへの固定方法を見る</a>

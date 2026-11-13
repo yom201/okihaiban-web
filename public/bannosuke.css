@@ -293,17 +293,6 @@ h3 {
   letter-spacing: 0.06em;
 }
 
-.bannosuke-landing .hero-copy .hero-context {
-  width: fit-content;
-  margin: 0 0 18px;
-  border-left: 4px solid var(--yellow);
-  padding: 5px 0 5px 12px;
-  color: #ffffff;
-  font-size: clamp(0.92rem, 1.3vw, 1.12rem);
-  font-weight: 1000;
-  letter-spacing: 0.02em;
-}
-
 .bannosuke-landing .hero-copy .trademark-status {
   margin: 18px 0 0;
   color: #ffffff;
@@ -535,33 +524,6 @@ h3 {
   gap: 12px;
 }
 
-.feature-visuals {
-  display: grid;
-  gap: clamp(28px, 5vw, 54px);
-  margin: 0 0 clamp(36px, 6vw, 68px);
-}
-
-.feature-main-visual,
-.feature-overview-visual {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.feature-main-visual {
-  max-width: 980px;
-}
-
-.feature-overview-visual {
-  max-width: 900px;
-}
-
-.feature-main-visual img,
-.feature-overview-visual img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .state-change-band {
   background: #eef3fb;
   color: #111a2b;
@@ -582,7 +544,7 @@ h3 {
   font-weight: 900;
 }
 
-.state-change-feature h3 {
+.state-change-feature h2 {
   margin: 0;
   color: #0a3273;
   font-size: clamp(1.55rem, 3vw, 2.25rem);
@@ -1599,7 +1561,7 @@ h3 {
 
 /* Problem-led landing page: 2026-08-29 */
 .problem-led-landing .hero {
-  min-height: 860px;
+  min-height: min(740px, 94svh);
   grid-template-columns: minmax(560px, 760px) minmax(380px, 560px);
   gap: clamp(34px, 4vw, 62px);
   justify-content: center;
@@ -1626,51 +1588,16 @@ h3 {
   line-height: 1.8;
 }
 
-.problem-led-landing .hero-description strong {
-  display: block;
-  margin-top: 6px;
-  color: #ffffff;
-  font-weight: 1000;
-}
-
-.hero-question-list {
-  display: grid;
-  gap: 8px;
-  max-width: 680px;
-  margin: 24px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hero-question-list li {
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 11px 16px 11px 46px;
-  color: #ffffff;
-  font-size: clamp(0.94rem, 1.25vw, 1.08rem);
-  font-weight: 900;
-  line-height: 1.5;
-}
-
-.hero-question-list li::before {
-  position: absolute;
-  top: 50%;
-  left: 17px;
-  width: 12px;
-  height: 12px;
-  border: 3px solid var(--yellow);
-  border-radius: 50%;
-  content: "";
-  transform: translateY(-50%);
-}
-
 .problem-led-landing .hero-copy .trademark-status {
   margin-top: 24px;
   color: #b9c9e5;
   font-size: 0.82rem;
   font-weight: 760;
+}
+
+.problem-led-landing main > section[id],
+#remote-requirements {
+  scroll-margin-top: 120px;
 }
 
 .problem-band {
@@ -1681,8 +1608,7 @@ h3 {
   color: #121d32;
 }
 
-.problem-band .section-kicker,
-.feature-intro-band .section-kicker {
+.problem-band .section-kicker {
   color: #0d47a1;
 }
 
@@ -1691,7 +1617,8 @@ h3 {
 }
 
 .problem-band .section-lead,
-.how-band .section-lead {
+.how-band .section-lead,
+.camera-band .section-lead {
   color: #4d5a70;
   font-weight: 760;
 }
@@ -1928,24 +1855,54 @@ h3 {
   font-weight: 700;
 }
 
-.feature-intro-band {
+.setup-band {
   background:
     linear-gradient(135deg, rgba(255, 227, 0, 0.22), transparent 46%),
     #ffffff;
   color: #111a2b;
 }
 
-.feature-intro h2 {
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  word-break: normal;
+.setup-steps {
+  display: grid;
+  gap: 18px;
+  max-width: 760px;
+  margin: 0;
+  padding-inline-start: 1.6em;
 }
 
-.feature-intro > div:first-child > p:last-child {
-  max-width: 760px;
+.setup-steps li::marker,
+.setup-steps strong {
+  color: #0a3273;
+  font-weight: 900;
+}
+
+.setup-steps p {
+  margin: 4px 0 0;
+}
+
+.setup-guides {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
   margin: 24px 0 0;
-  color: #4c596c;
-  font-size: clamp(1rem, 1.9vw, 1.2rem);
-  font-weight: 760;
+}
+
+.setup-guides a {
+  color: #0a3273;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.camera-options h3 {
+  margin: 0;
+  color: #0a3273;
+  font-size: 1.15rem;
+}
+
+.camera-options p {
+  margin: 6px 0 0;
+  color: #4d5a70;
 }
 
 .feature-summary-grid {
@@ -2044,8 +2001,31 @@ h3 {
     font-size: clamp(2.25rem, 9.2vw, 2.85rem);
   }
 
-  .hero-question-list li {
-    padding: 10px 12px 10px 40px;
+  .problem-led-landing .hero-actions {
+    margin-top: 24px;
+  }
+
+  .problem-led-landing .hero-actions .button {
+    width: auto;
+    flex: 1 0 auto;
+  }
+
+  .problem-led-landing .play-store-entry img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .problem-led-landing main > section[id],
+  #remote-requirements {
+    scroll-margin-top: 96px;
+  }
+
+  .remote-check-landing .usecase-hero {
+    padding-top: 112px;
+  }
+
+  .remote-check-landing .usecase-hero h1 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
   }
 
   .problem-card {
