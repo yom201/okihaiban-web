@@ -202,6 +202,17 @@ h3 {
   padding: 12px;
 }
 
+.store-entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.store-entries .play-store-entry {
+  margin-top: 0;
+}
+
 .play-store-entry:focus-visible {
   outline: 3px solid var(--yellow);
   outline-offset: 3px;
@@ -2151,4 +2162,311 @@ h3 {
   .legal-hero-inner {
     width: min(896px, 100%);
   }
+}
+
+/* ===== 検知の流れ・設定画面（2026-11-17） ===== */
+.detect-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 36px;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.detect-flow li {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  padding: 18px 18px 18px 64px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--ink);
+  transition: border-color 400ms ease, background 400ms ease, transform 400ms ease, box-shadow 400ms ease;
+}
+
+.detect-flow li small {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.detect-flow-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+  transform: translateY(-50%);
+  transition: background 400ms ease, color 400ms ease;
+}
+
+.detect-flow li.is-lit {
+  border-color: var(--yellow);
+  background: rgba(255, 227, 0, 0.12);
+  box-shadow: 0 0 0 4px rgba(255, 227, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.detect-flow li.is-lit .detect-flow-icon {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.screens-band {
+  background: linear-gradient(180deg, #071b43 0%, var(--navy) 100%);
+  color: var(--ink);
+}
+
+.screens-band .section-kicker {
+  color: var(--yellow);
+}
+
+.screens-band .section-lead {
+  color: var(--muted);
+}
+
+.screens-stage {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: center;
+  margin-top: 36px;
+}
+
+.phone-frame {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 48px;
+  background: linear-gradient(145deg, #2a3550, #0b1226);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.14), var(--shadow), 0 0 60px rgba(255, 227, 0, 0.12);
+  cursor: pointer;
+}
+
+.phone-island {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  z-index: 3;
+  width: 32%;
+  height: 22px;
+  border-radius: 14px;
+  background: #000;
+  transform: translateX(-50%);
+}
+
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 600 / 1290;
+  border-radius: 38px;
+  background: #f4f6fa;
+  padding-top: 7%;
+}
+
+.phone-shot {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(6%);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.phone-shot.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tap-ring {
+  position: absolute;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border: 3px solid var(--yellow);
+  border-radius: 50%;
+  background: rgba(255, 227, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tap-ring.is-tapping {
+  animation: tap-ring 900ms ease-out forwards;
+}
+
+@keyframes tap-ring {
+  0% { opacity: 0; transform: scale(0.4); }
+  25% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.9); }
+}
+
+.screen-captions {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.screen-caption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  opacity: 0.45;
+  transition: opacity 400ms ease, border-color 400ms ease, background 400ms ease;
+}
+
+.screen-caption span {
+  grid-row: span 2;
+  color: var(--yellow);
+  font-weight: 800;
+}
+
+.screen-caption p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.screen-caption.is-active {
+  border-color: var(--line);
+  background: var(--card);
+  opacity: 1;
+}
+
+.screen-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.screen-thumb {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 300ms ease, transform 300ms ease;
+}
+
+.screen-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.screen-thumb:hover,
+.screen-thumb:focus-visible {
+  transform: translateY(-4px);
+}
+
+.screen-thumb.is-active {
+  border-color: var(--yellow);
+}
+
+.screens-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .detect-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .screens-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-frame {
+    max-width: 280px;
+  }
+
+  .screen-captions .screen-caption:not(.is-active) {
+    display: none;
+  }
+
+  .screen-thumbs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .screen-thumb span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .phone-shot,
+  .detect-flow li {
+    transition: none;
+    transform: none;
+  }
+
+  .tap-ring.is-tapping {
+    animation: none;
+  }
+}
+
+.how-band .detect-flow li {
+  border-color: rgba(6, 22, 56, 0.16);
+  background: #ffffff;
+  color: var(--navy);
+}
+
+.how-band .detect-flow li small {
+  color: #4b5b7a;
+}
+
+.how-band .detect-flow-icon {
+  background: rgba(6, 22, 56, 0.08);
+  color: var(--navy);
+}
+
+.how-band .detect-flow li.is-lit {
+  border-color: var(--gold);
+  background: #fff8cc;
+  box-shadow: 0 0 0 4px rgba(244, 179, 50, 0.22);
+}
+
+.how-band .detect-flow li.is-lit .detect-flow-icon {
+  background: var(--yellow);
+  color: var(--navy);
 }

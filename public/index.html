@@ -6,7 +6,7 @@
     <title>置き配の監視をスマホで｜玄関前を記録する置き配番</title>
     <meta
       name="description"
-      content="余ったAndroidスマホで玄関前の置き配を監視。指定した範囲の動きを検知し、前後の写真や動画を記録します。設置手順、専用カメラや宅配ボックスとの違い、月額料金を確認できます。"
+      content="余ったiPhone・Androidスマホで玄関前の置き配を監視。指定した範囲の動きを検知し、前後の写真や動画を記録します。設置手順、専用カメラや宅配ボックスとの違い、月額料金を確認できます。"
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="置き配の監視をスマホで｜玄関前を記録する置き配番" />
     <meta
       property="og:description"
-      content="余ったAndroidスマホで置き配を監視。玄関前の指定範囲で動きを検知し、前後の写真や動画を見返せます。"
+      content="余ったiPhone・Androidスマホで置き配を監視。玄関前の指定範囲で動きを検知し、前後の写真や動画を見返せます。"
     />
     <meta property="og:image" content="https://okihaiban.com/assets/hero.png" />
     <meta property="og:image:width" content="1448" />
@@ -26,7 +26,7 @@
     <link rel="canonical" href="https://okihaiban.com/" />
     <link rel="icon" type="image/png" href="/assets/okihaiban_app_icon_512x512.png" />
     <link rel="preload" href="/assets/hero.webp" as="image" type="image/webp" />
-    <link rel="stylesheet" href="/bannosuke.css?v=20261113-seo-review" />
+    <link rel="stylesheet" href="/bannosuke.css?v=20261117-app-store" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -47,6 +47,7 @@
       <nav class="nav-links" aria-label="主要ナビゲーション">
         <a href="#setup">設置手順</a>
         <a href="#how">記録のしくみ</a>
+        <a href="#app-screens">設定画面</a>
         <a href="#camera">カメラの選び方</a>
         <a href="/network-camera-image-quality">室内の高画質撮影</a>
       </nav>
@@ -60,20 +61,29 @@
             <span class="hero-title-line">置き配を監視</span>
           </h1>
           <p class="hero-description">
-            置き配番（おきはいばん）は、余ったAndroidスマホで玄関前の置き配を見守るアプリです。
+            置き配番（おきはいばん）は、余ったiPhone・Androidスマホで玄関前の置き配を見守るアプリです。
             指定した範囲で動きを検知すると、その前後を写真や動画で見返せます。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#setup">設置手順を見る</a>
             <a class="button secondary" href="#camera">監視方法を比べる</a>
           </div>
-          <a class="play-store-entry" href="https://play.google.com/store/apps/details?id=com.okihaiban.okihaibanApp">
-            <img src="/assets/google-play-qr.png" width="456" height="456" alt="" />
-            <span class="play-store-entry-copy">
-              <strong>Google Play</strong>
-              <span>Android 10以上<br />日本では月額390円（税込）<br />自動更新</span>
-            </span>
-          </a>
+          <div class="store-entries">
+            <a class="play-store-entry" href="https://apps.apple.com/jp/app/id6804339937">
+              <img src="/assets/app-store-qr.png" width="456" height="456" alt="" />
+              <span class="play-store-entry-copy">
+                <strong>App Store</strong>
+                <span>iOS 15.0以上<br />日本では月額390円（税込）<br />自動更新</span>
+              </span>
+            </a>
+            <a class="play-store-entry" href="https://play.google.com/store/apps/details?id=com.okihaiban.okihaibanApp">
+              <img src="/assets/google-play-qr.png" width="456" height="456" alt="" />
+              <span class="play-store-entry-copy">
+                <strong>Google Play</strong>
+                <span>Android 10以上<br />日本では月額390円（税込）<br />自動更新</span>
+              </span>
+            </a>
+          </div>
           <p class="trademark-status">「置き配番」は商標登録出願中です。</p>
         </div>
         <figure class="hero-character hero-bannosuke">
@@ -179,6 +189,11 @@
               侵入検知モードでは、監視エリア内の動きをきっかけに記録します。外出先から今の様子を確かめたいときは、リモート撮影で写真を1枚リクエストできます。
             </p>
           </div>
+          <ol class="detect-flow" aria-label="検知から通知までの流れ">
+            <li><span class="detect-flow-icon" aria-hidden="true">01</span><strong>動きを検知</strong><small>監視エリアに動きが入る</small></li>
+            <li><span class="detect-flow-icon" aria-hidden="true">02</span><strong>前後を記録</strong><small>直前・その時・少し後の画像と動画</small></li>
+            <li><span class="detect-flow-icon" aria-hidden="true">03</span><strong>Gmailで通知</strong><small>Gmail通知を有効にした場合</small></li>
+          </ol>
           <div class="record-grid">
             <article>
               <span>1</span>
@@ -206,6 +221,41 @@
             <article><strong>Gmail通知</strong><span>Google連携と通知の設定を済ませると、検知時の通知をメールで受け取れます。通信状況によって遅れる場合があります。</span></article>
             <article><strong>Google Drive</strong><span>記録は端末に保存されます。Google Driveと連携すれば、記録を自分のDriveにバックアップできます。</span></article>
           </div>
+        </div>
+      </section>
+
+      <section id="app-screens" class="section-band screens-band" aria-labelledby="app-screens-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">SETTINGS</p>
+            <h2 id="app-screens-title">設定画面をすべて見る</h2>
+            <p class="section-lead">置き配番の設定画面を、上から下まで順に表示しています。押すと次の画面へ進み、下の一覧から好きな画面も選べます。</p>
+          </div>
+          <div class="screens-stage" data-screens>
+            <div class="phone-frame">
+              <div class="phone-island" aria-hidden="true"></div>
+              <div class="phone-screen">
+                <img class="phone-shot is-active" src="/assets/screens/settings-01.jpg" width="600" height="1206" alt="置き配番の設定画面（監視）" data-taps="50,16.3;50,32.8;50,64.8" loading="lazy" decoding="async" />
+                <img class="phone-shot" src="/assets/screens/settings-02.jpg" width="600" height="1206" alt="置き配番の設定画面（バックアップと通知）" data-taps="50,45.6" loading="lazy" decoding="async" />
+                <img class="phone-shot" src="/assets/screens/settings-03.jpg" width="600" height="1206" alt="置き配番の設定画面（リモート撮影とプライバシー）" data-taps="50,49.5;50,62.5" loading="lazy" decoding="async" />
+                <img class="phone-shot" src="/assets/screens/settings-04.jpg" width="600" height="1206" alt="置き配番の設定画面（サポートとアプリ情報）" data-taps="50,38.2;50,80.7" loading="lazy" decoding="async" />
+                <span class="tap-ring" aria-hidden="true"></span>
+              </div>
+            </div>
+            <ol class="screen-captions">
+              <li class="screen-caption is-active" data-index="0"><span>01</span><strong>監視</strong><p>検知方式、動体検知の感度、検知時のフラッシュと音声案内、動画記録時間、解像度、監視開始タイマーを選べます。</p></li>
+              <li class="screen-caption" data-index="1"><span>02</span><strong>バックアップと通知</strong><p>Google Drive 連携、検知時の Gmail 通知、Web から今のカメラ映像を撮影する設定をここで有効にします。</p></li>
+              <li class="screen-caption" data-index="2"><span>03</span><strong>リモート撮影とプライバシー</strong><p>Web から撮影する頁の URL をコピーでき、アプリのロックや、保存されたデータの削除もここから行えます。</p></li>
+              <li class="screen-caption" data-index="3"><span>04</span><strong>サポートとアプリ情報</strong><p>使い方ガイド、課金の状態と月額プラン、バージョン、言語を確かめられます。</p></li>
+            </ol>
+          </div>
+          <div class="screen-thumbs" role="group" aria-label="設定画面の一覧">
+            <button class="screen-thumb is-active" type="button" data-index="0" aria-label="監視の画面を表示"><img src="/assets/screens/settings-01.jpg" width="600" height="1206" alt="" loading="lazy" decoding="async" /><span>監視</span></button>
+            <button class="screen-thumb" type="button" data-index="1" aria-label="バックアップと通知の画面を表示"><img src="/assets/screens/settings-02.jpg" width="600" height="1206" alt="" loading="lazy" decoding="async" /><span>バックアップと通知</span></button>
+            <button class="screen-thumb" type="button" data-index="2" aria-label="リモート撮影とプライバシーの画面を表示"><img src="/assets/screens/settings-03.jpg" width="600" height="1206" alt="" loading="lazy" decoding="async" /><span>リモート撮影とプライバシー</span></button>
+            <button class="screen-thumb" type="button" data-index="3" aria-label="サポートとアプリ情報の画面を表示"><img src="/assets/screens/settings-04.jpg" width="600" height="1206" alt="" loading="lazy" decoding="async" /><span>サポートとアプリ情報</span></button>
+          </div>
+          <p class="screens-note">画面は iPhone 版（バージョン 1.1.3）で撮影した設定画面です。</p>
         </div>
       </section>
 
@@ -297,5 +347,6 @@
         <p>© 2026 Ichitap</p>
       </div>
     </footer>
+      <script src="/app-screens.js?v=20261117" defer></script>
   </body>
 </html>

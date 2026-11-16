@@ -22,7 +22,7 @@ PUBLIC = ROOT / "public"
 CANONICAL_ORIGIN = "https://okihaiban.com"
 PAGES_ORIGIN = "https://okihaiban-web.pages.dev"
 # iOS 版を App Store で公開したら True にする。True にすると画質ページの iPhone の注記が必須に戻る
-IOS_APP_RELEASED = False
+IOS_APP_RELEASED = True
 REQUIRED_ALIASES = {
     "/bannosuke": "/",
     "/bannosuke.html": "/",
